@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "transitions": 1142,
+  "exact_public_state_and_action_match": true,
+  "recorded_camera_match": true,
+  "five_rgbd_cameras_valid": true,
+  "obs_next_obs_continuity": true
+}

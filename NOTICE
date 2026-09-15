@@ -1,0 +1,23 @@
+PhyRC 2027 Phase 1 Simulation Environment
+Copyright 2026 RIRO Lab (Sehee Jung, Injin Choi, Seoyul Jeon, Daehyung Park*)
+
+* Principal Investigator, RIRO Lab
+
+Organizers
+  Sehee Jung
+  Injin Choi
+  Seoyul Jeon
+  Daehyung Park* (Principal Investigator)
+
+Contact: phyrc.challenge@gmail.com
+
+This product includes software developed by RIRO Lab and is licensed under
+the Apache License, Version 2.0 (see LICENSE).
+
+Parts of the simulation source in src/PhyRC_Sim are adapted from an
+open-source garment-manipulation framework and ported to Isaac Sim 6.0.1.
+
+The Apache License does not cover third-party assets. The files under
+assets/custom/ (robot, manikin, and garment models and textures), NVIDIA
+Isaac Sim, and any files downloaded by `./run.sh prepare` remain subject to
+their own terms. See THIRD_PARTY.md for details.

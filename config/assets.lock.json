@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "path": "assets/custom/garments/N_PR_2000_TShirt001.usd",
+      "sha256": "9e8471f339b6dac45f7b6817fd4c823bef6c142710cfa6cc359db4a44c653d10",
+      "provenance": "Local project input; exact public download not established. See THIRD_PARTY.md."
+    },
+    {
+      "path": "assets/custom/human/female2_c4-c5.usd",
+      "sha256": "4585c889e23e6218926d92d7d0cf1fdcd6feb9dbebe68f1e31398e8b6edc2c06",
+      "provenance": "Local project input; exact public download not established. See THIRD_PARTY.md."
+    },
+    {
+      "path": "assets/custom/human/textures/c4-c5.jpg",
+      "sha256": "32c553a9253dd14c37519567aa60a6965c7b2564deb6b456a737a31968e10623",
+      "provenance": "Local project input; exact public download not established. See THIRD_PARTY.md."
+    },
+    {
+      "path": "assets/custom/robots/stretch_4/stretch_4.usd",
+      "sha256": "a7a7be5bc14354caaeb4461c9b733e10d8f18a0d047dec58814904e8317deb37",
+      "provenance": "Local project input; exact public download not established. See THIRD_PARTY.md."
+    },
+    {
+      "path": "assets/downloads/2K-tiling_30_basecolor.jpg",
+      "sha256": "5e82c9839954fd25246ce9a9234b3bb2c05e175203ae80d09cf09693477768de",
+      "archive_url": "https://huggingface.co/datasets/wayrise/DexGarmentLab/resolve/2ba4092676006bc98c257e7b822de39526fd9692/Scene.zip",
+      "member": "Scene/kitchen/kitchen_7/textures/2K-tiling_30_basecolor.jpg"
+    },
+    {
+      "path": "assets/downloads/Material/Garment/linen_Pumpkin.usd",
+      "sha256": "09ac1a4489f15455bce60d521826e6772f2a3e0f0ca69304bdb019bf45ca7876",
+      "url": "https://raw.githubusercontent.com/wayrise/DexGarmentLab/e4e298e696bae5d866ded3b31e0ae27becea5376/Assets/Material/Garment/linen_Pumpkin.usd"
+    },
+    {
+      "path": "assets/downloads/Material/Garment/Color_Texture/linen_Pumpkin/BaseColor.jpg",
+      "sha256": "cc601f778f13f87cd4a448c54a2634c97b9bb467a0c52e1fbe5cf90f0b8a0f61",
+      "url": "https://raw.githubusercontent.com/wayrise/DexGarmentLab/e4e298e696bae5d866ded3b31e0ae27becea5376/Assets/Material/Garment/Color_Texture/linen_Pumpkin/BaseColor.jpg"
+    },
+    {
+      "path": "assets/downloads/Material/Garment/Color_Texture/linen_Pumpkin/Roughness.jpg",
+      "sha256": "e47866f43664377cb2aeba6f271a6914335a86c6576fdb4cc08f863c27341684",
+      "url": "https://raw.githubusercontent.com/wayrise/DexGarmentLab/e4e298e696bae5d866ded3b31e0ae27becea5376/Assets/Material/Garment/Color_Texture/linen_Pumpkin/Roughness.jpg"
+    }
+  ]
+}

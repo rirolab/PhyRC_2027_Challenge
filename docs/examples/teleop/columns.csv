@@ -1,0 +1,357 @@
+﻿file,column_index,column,unit,meaning,example_first_row
+demo_0_actions.csv,0,sample,index,"Action step index within the episode, starting at 0",0
+demo_0_actions.csv,1,obs_time_s,s,Simulation time of the observation just before the action,0.008333333767950535
+demo_0_actions.csv,2,next_obs_time_s,s,Simulation time of the observation just after the action,0.058333336375653744
+demo_0_actions.csv,3,start_tick,tick,Physics tick in the raw log where the action starts,0
+demo_0_actions.csv,4,end_tick,tick,Physics tick in the raw log where the action ends,12
+demo_0_actions.csv,5,robot_0.base_forward_velocity,"normalized [-1,1]",robot_0 base_forward_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,6,robot_0.base_left_velocity,"normalized [-1,1]",robot_0 base_left_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,-0.0
+demo_0_actions.csv,7,robot_0.base_yaw_velocity,"normalized [-1,1]",robot_0 base_yaw_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,8,robot_0.lift_velocity,"normalized [-1,1]",robot_0 lift_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,9,robot_0.arm_extension_velocity,"normalized [-1,1]",robot_0 arm_extension_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,10,robot_0.wrist_yaw_velocity,"normalized [-1,1]",robot_0 wrist_yaw_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,11,robot_0.wrist_pitch_velocity,"normalized [-1,1]",robot_0 wrist_pitch_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,12,robot_0.wrist_roll_velocity,"normalized [-1,1]",robot_0 wrist_roll_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,13,robot_0.gripper_command,"normalized [-1,1]",robot_0 gripper_command; >0.5 close / <-0.5 open / otherwise keep previous intent,0.0
+demo_0_actions.csv,14,robot_1.base_forward_velocity,"normalized [-1,1]",robot_1 base_forward_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,15,robot_1.base_left_velocity,"normalized [-1,1]",robot_1 base_left_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,-0.0
+demo_0_actions.csv,16,robot_1.base_yaw_velocity,"normalized [-1,1]",robot_1 base_yaw_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,17,robot_1.lift_velocity,"normalized [-1,1]",robot_1 lift_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,18,robot_1.arm_extension_velocity,"normalized [-1,1]",robot_1 arm_extension_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,19,robot_1.wrist_yaw_velocity,"normalized [-1,1]",robot_1 wrist_yaw_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,20,robot_1.wrist_pitch_velocity,"normalized [-1,1]",robot_1 wrist_pitch_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,21,robot_1.wrist_roll_velocity,"normalized [-1,1]",robot_1 wrist_roll_velocity; +1 positive / -1 negative / 0 no command; multiply by the rate scale for physical velocity,0.0
+demo_0_actions.csv,22,robot_1.gripper_command,"normalized [-1,1]",robot_1 gripper_command; >0.5 close / <-0.5 open / otherwise keep previous intent,0.0
+demo_0_applied_targets.csv,0,sample,index,"Action step index within the episode, starting at 0",0
+demo_0_applied_targets.csv,1,control_substep,index,"60 Hz controller step within the action: 0, 1, 2",0
+demo_0_applied_targets.csv,2,physics_tick,tick,"Physics tick in the raw log, 240 Hz",0
+demo_0_applied_targets.csv,3,robot_0.lift,m,robot_0 applied controller target lift; audit only,0.0
+demo_0_applied_targets.csv,4,robot_0.arm,m,robot_0 applied controller target arm; audit only,0.0
+demo_0_applied_targets.csv,5,robot_0.yaw,rad,robot_0 applied controller target yaw; audit only,0.0
+demo_0_applied_targets.csv,6,robot_0.pitch,rad,robot_0 applied controller target pitch; audit only,0.0
+demo_0_applied_targets.csv,7,robot_0.roll,rad,robot_0 applied controller target roll; audit only,0.0
+demo_0_applied_targets.csv,8,robot_0.grip_pos,rad,robot_0 applied controller target grip_pos; audit only,0.5
+demo_0_applied_targets.csv,9,robot_0.base_fwd,m/s,robot_0 applied controller target base_fwd; audit only,0.0
+demo_0_applied_targets.csv,10,robot_0.base_strafe,m/s,robot_0 applied controller target base_strafe; audit only,0.0
+demo_0_applied_targets.csv,11,robot_0.base_turn,rad/s,robot_0 applied controller target base_turn; audit only,0.0
+demo_0_applied_targets.csv,12,robot_1.lift,m,robot_1 applied controller target lift; audit only,0.0
+demo_0_applied_targets.csv,13,robot_1.arm,m,robot_1 applied controller target arm; audit only,0.0
+demo_0_applied_targets.csv,14,robot_1.yaw,rad,robot_1 applied controller target yaw; audit only,0.0
+demo_0_applied_targets.csv,15,robot_1.pitch,rad,robot_1 applied controller target pitch; audit only,0.0
+demo_0_applied_targets.csv,16,robot_1.roll,rad,robot_1 applied controller target roll; audit only,0.0
+demo_0_applied_targets.csv,17,robot_1.grip_pos,rad,robot_1 applied controller target grip_pos; audit only,0.5
+demo_0_applied_targets.csv,18,robot_1.base_fwd,m/s,robot_1 applied controller target base_fwd; audit only,0.0
+demo_0_applied_targets.csv,19,robot_1.base_strafe,m/s,robot_1 applied controller target base_strafe; audit only,0.0
+demo_0_applied_targets.csv,20,robot_1.base_turn,rad/s,robot_1 applied controller target base_turn; audit only,0.0
+demo_0_evaluation.csv,0,sample,index,"Action step index within the episode, starting at 0",0
+demo_0_evaluation.csv,1,time_s,s,Simulation time of the observation at the end of this action step,0.058333336375653744
+demo_0_evaluation.csv,2,raw_points,points,"Cumulative total including pickup, max 50",0.0
+demo_0_evaluation.csv,3,rate_points_pickup_excluded,points,"points/s numerator, excluding pickup points actually earned, max 45",0.0
+demo_0_evaluation.csv,4,score_time_s,s,Simulation time from first contact to the last dressing award,0.0
+demo_0_evaluation.csv,5,points_per_s,points/s,Cumulative points excluding pickup / score_time_s; empty when undefined,
+demo_0_evaluation.csv,6,first_contact_tick,tick,First contact tick from the start of the evaluation episode; -1 if no contact yet,-1
+demo_0_evaluation.csv,7,pickup,points,"Pickup held with the same gripper, max 5",0.0
+demo_0_evaluation.csv,8,first_sleeve,points,"First hand through a sleeve, max 5",0.0
+demo_0_evaluation.csv,9,opposite_shoulder,points,"Shirt over the opposite shoulder, max 5",0.0
+demo_0_evaluation.csv,10,second_sleeve,points,"Other hand through the other sleeve, max 5",0.0
+demo_0_evaluation.csv,11,overall_dressing,points,"Sum of left/right upper arm (5+5), neck (10), and V-neck (10), max 30",0.0
+demo_0_evaluation.csv,12,reward,number,"Imitation-learning placeholder, 0 by default; not the evaluation score",0.0
+demo_0_evaluation.csv,13,done,bool,Whether the episode ended after this step; not a success flag,0
+demo_0_next_obs.csv,0,sample,index,"Action step index within the episode, starting at 0",0
+demo_0_next_obs.csv,1,base_pose_world[0],m,robot_0 base_pose_world x; world,-1.0665600299835205
+demo_0_next_obs.csv,2,base_pose_world[1],m,robot_0 base_pose_world y; world,-0.13899877667427063
+demo_0_next_obs.csv,3,base_pose_world[2],m,robot_0 base_pose_world z; world,0.012117264792323112
+demo_0_next_obs.csv,4,base_pose_world[3],unit quaternion,robot_0 base_pose_world qw; world,-0.7071067690849304
+demo_0_next_obs.csv,5,base_pose_world[4],unit quaternion,robot_0 base_pose_world qx; world,0.0
+demo_0_next_obs.csv,6,base_pose_world[5],unit quaternion,robot_0 base_pose_world qy; world,0.0
+demo_0_next_obs.csv,7,base_pose_world[6],unit quaternion,robot_0 base_pose_world qz; world,0.7071067690849304
+demo_0_next_obs.csv,8,base_pose_world[7],m,robot_1 base_pose_world x; world,1.0665600299835205
+demo_0_next_obs.csv,9,base_pose_world[8],m,robot_1 base_pose_world y; world,-0.13899877667427063
+demo_0_next_obs.csv,10,base_pose_world[9],m,robot_1 base_pose_world z; world,0.012117357924580574
+demo_0_next_obs.csv,11,base_pose_world[10],unit quaternion,robot_1 base_pose_world qw; world,-0.7071067690849304
+demo_0_next_obs.csv,12,base_pose_world[11],unit quaternion,robot_1 base_pose_world qx; world,0.0
+demo_0_next_obs.csv,13,base_pose_world[12],unit quaternion,robot_1 base_pose_world qy; world,0.0
+demo_0_next_obs.csv,14,base_pose_world[13],unit quaternion,robot_1 base_pose_world qz; world,0.7071067690849304
+demo_0_next_obs.csv,15,base_twist_world[0],m/s,robot_0 world vx,-8.228778369812062e-08
+demo_0_next_obs.csv,16,base_twist_world[1],m/s,robot_0 world vy,-1.6463947076772456e-06
+demo_0_next_obs.csv,17,base_twist_world[2],m/s,robot_0 world vz,-0.57225102186203
+demo_0_next_obs.csv,18,base_twist_world[3],rad/s,robot_0 world wx,-1.90120808838401e-05
+demo_0_next_obs.csv,19,base_twist_world[4],rad/s,robot_0 world wy,3.439623128542735e-07
+demo_0_next_obs.csv,20,base_twist_world[5],rad/s,robot_0 world wz,1.1877216820721515e-05
+demo_0_next_obs.csv,21,base_twist_world[6],m/s,robot_1 world vx,-8.188958133814594e-08
+demo_0_next_obs.csv,22,base_twist_world[7],m/s,robot_1 world vy,-1.6463666270283284e-06
+demo_0_next_obs.csv,23,base_twist_world[8],m/s,robot_1 world vz,-0.5722513198852539
+demo_0_next_obs.csv,24,base_twist_world[9],rad/s,robot_1 world wx,-1.9013299606740475e-05
+demo_0_next_obs.csv,25,base_twist_world[10],rad/s,robot_1 world wy,3.414945695112692e-07
+demo_0_next_obs.csv,26,base_twist_world[11],rad/s,robot_1 world wz,1.1879559679073282e-05
+demo_0_next_obs.csv,27,controller_target[0],m,robot_0 controller_target lift,0.0
+demo_0_next_obs.csv,28,controller_target[1],m,robot_0 controller_target arm,0.0
+demo_0_next_obs.csv,29,controller_target[2],rad,robot_0 controller_target yaw,0.0
+demo_0_next_obs.csv,30,controller_target[3],rad,robot_0 controller_target pitch,0.0
+demo_0_next_obs.csv,31,controller_target[4],rad,robot_0 controller_target roll,0.0
+demo_0_next_obs.csv,32,controller_target[5],rad,robot_0 controller_target grip_pos,0.5
+demo_0_next_obs.csv,33,controller_target[6],m/s,robot_0 controller_target base_fwd,0.0
+demo_0_next_obs.csv,34,controller_target[7],m/s,robot_0 controller_target base_strafe,0.0
+demo_0_next_obs.csv,35,controller_target[8],rad/s,robot_0 controller_target base_turn,0.0
+demo_0_next_obs.csv,36,controller_target[9],m,robot_1 controller_target lift,0.0
+demo_0_next_obs.csv,37,controller_target[10],m,robot_1 controller_target arm,0.0
+demo_0_next_obs.csv,38,controller_target[11],rad,robot_1 controller_target yaw,0.0
+demo_0_next_obs.csv,39,controller_target[12],rad,robot_1 controller_target pitch,0.0
+demo_0_next_obs.csv,40,controller_target[13],rad,robot_1 controller_target roll,0.0
+demo_0_next_obs.csv,41,controller_target[14],rad,robot_1 controller_target grip_pos,0.5
+demo_0_next_obs.csv,42,controller_target[15],m/s,robot_1 controller_target base_fwd,0.0
+demo_0_next_obs.csv,43,controller_target[16],m/s,robot_1 controller_target base_strafe,0.0
+demo_0_next_obs.csv,44,controller_target[17],rad/s,robot_1 controller_target base_turn,0.0
+demo_0_next_obs.csv,45,fingertip_origin_distance[0],m,robot_0 distance between fingertip link origins,0.042154908180236816
+demo_0_next_obs.csv,46,fingertip_origin_distance[1],m,robot_1 distance between fingertip link origins,0.04215508699417114
+demo_0_next_obs.csv,47,fingertip_position_base[0],m,robot_0 fingertip link 0 x in base,0.4614090025424957
+demo_0_next_obs.csv,48,fingertip_position_base[1],m,robot_0 fingertip link 0 y in base,-0.06634211540222168
+demo_0_next_obs.csv,49,fingertip_position_base[2],m,robot_0 fingertip link 0 z in base,0.178221195936203
+demo_0_next_obs.csv,50,fingertip_position_base[3],m,robot_0 fingertip link 1 x in base,0.4614090025424957
+demo_0_next_obs.csv,51,fingertip_position_base[4],m,robot_0 fingertip link 1 y in base,-0.1084970235824585
+demo_0_next_obs.csv,52,fingertip_position_base[5],m,robot_0 fingertip link 1 z in base,0.1782212257385254
+demo_0_next_obs.csv,53,fingertip_position_base[6],m,robot_1 fingertip link 0 x in base,0.4614090025424957
+demo_0_next_obs.csv,54,fingertip_position_base[7],m,robot_1 fingertip link 0 y in base,-0.06634199619293213
+demo_0_next_obs.csv,55,fingertip_position_base[8],m,robot_1 fingertip link 0 z in base,0.1782212257385254
+demo_0_next_obs.csv,56,fingertip_position_base[9],m,robot_1 fingertip link 1 x in base,0.4614090025424957
+demo_0_next_obs.csv,57,fingertip_position_base[10],m,robot_1 fingertip link 1 y in base,-0.10849708318710327
+demo_0_next_obs.csv,58,fingertip_position_base[11],m,robot_1 fingertip link 1 z in base,0.17822125554084778
+demo_0_next_obs.csv,59,grasp_pose_base[0],m,robot_0 grasp_pose_base x; robot base,0.46626970171928406
+demo_0_next_obs.csv,60,grasp_pose_base[1],m,robot_0 grasp_pose_base y; robot base,-0.08742034435272217
+demo_0_next_obs.csv,61,grasp_pose_base[2],m,robot_0 grasp_pose_base z; robot base,0.1782204955816269
+demo_0_next_obs.csv,62,grasp_pose_base[3],unit quaternion,robot_0 grasp_pose_base qw; robot base,1.0
+demo_0_next_obs.csv,63,grasp_pose_base[4],unit quaternion,robot_0 grasp_pose_base qx; robot base,-2.2759533635507978e-07
+demo_0_next_obs.csv,64,grasp_pose_base[5],unit quaternion,robot_0 grasp_pose_base qy; robot base,1.3906691265219706e-07
+demo_0_next_obs.csv,65,grasp_pose_base[6],unit quaternion,robot_0 grasp_pose_base qz; robot base,-1.7280209476666641e-06
+demo_0_next_obs.csv,66,grasp_pose_base[7],m,robot_1 grasp_pose_base x; robot base,0.46626970171928406
+demo_0_next_obs.csv,67,grasp_pose_base[8],m,robot_1 grasp_pose_base y; robot base,-0.08742022514343262
+demo_0_next_obs.csv,68,grasp_pose_base[9],m,robot_1 grasp_pose_base z; robot base,0.17822052538394928
+demo_0_next_obs.csv,69,grasp_pose_base[10],unit quaternion,robot_1 grasp_pose_base qw; robot base,1.0
+demo_0_next_obs.csv,70,grasp_pose_base[11],unit quaternion,robot_1 grasp_pose_base qx; robot base,-2.2759533635507978e-07
+demo_0_next_obs.csv,71,grasp_pose_base[12],unit quaternion,robot_1 grasp_pose_base qy; robot base,1.3906691265219706e-07
+demo_0_next_obs.csv,72,grasp_pose_base[13],unit quaternion,robot_1 grasp_pose_base qz; robot base,-1.7280209476666641e-06
+demo_0_next_obs.csv,73,gripper_close_command[0],bool,robot_0 close intent; not ground-truth grasp success,0.0
+demo_0_next_obs.csv,74,gripper_close_command[1],bool,robot_1 close intent; not ground-truth grasp success,0.0
+demo_0_next_obs.csv,75,joint_position[0],rad,robot_0 wheel_0_joint measured position,4.8713076239437214e-08
+demo_0_next_obs.csv,76,joint_position[1],rad,robot_0 wheel_1_joint measured position,1.0771139535847851e-08
+demo_0_next_obs.csv,77,joint_position[2],rad,robot_0 wheel_2_joint measured position,-6.000680485840348e-08
+demo_0_next_obs.csv,78,joint_position[3],m,robot_0 lift_joint measured position,4.5784551150340747e-10
+demo_0_next_obs.csv,79,joint_position[4],m,robot_0 arm_l1_joint measured position,2.187942982345703e-06
+demo_0_next_obs.csv,80,joint_position[5],m,robot_0 arm_l2_joint measured position,3.3388575957360445e-06
+demo_0_next_obs.csv,81,joint_position[6],m,robot_0 arm_l3_joint measured position,3.5658110846270574e-06
+demo_0_next_obs.csv,82,joint_position[7],m,robot_0 arm_l4_joint measured position,2.8875872430944582e-06
+demo_0_next_obs.csv,83,joint_position[8],rad,robot_0 wrist_yaw_joint measured position,-3.7260322187648853e-06
+demo_0_next_obs.csv,84,joint_position[9],rad,robot_0 wrist_pitch_joint measured position,1.6496990440373338e-08
+demo_0_next_obs.csv,85,joint_position[10],rad,robot_0 wrist_roll_joint measured position,-4.2607737782418553e-07
+demo_0_next_obs.csv,86,joint_position[11],rad,robot_0 gripper_finger_left_joint measured position,0.10939455032348633
+demo_0_next_obs.csv,87,joint_position[12],rad,robot_0 gripper_finger_right_joint measured position,0.10938208550214767
+demo_0_next_obs.csv,88,joint_position[13],rad,robot_1 wheel_0_joint measured position,4.875740344800761e-08
+demo_0_next_obs.csv,89,joint_position[14],rad,robot_1 wheel_1_joint measured position,1.0785305093463649e-08
+demo_0_next_obs.csv,90,joint_position[15],rad,robot_1 wheel_2_joint measured position,-6.006313668649454e-08
+demo_0_next_obs.csv,91,joint_position[16],m,robot_1 lift_joint measured position,-1.2191238296654916e-10
+demo_0_next_obs.csv,92,joint_position[17],m,robot_1 arm_l1_joint measured position,2.187968675571028e-06
+demo_0_next_obs.csv,93,joint_position[18],m,robot_1 arm_l2_joint measured position,3.3388939755241154e-06
+demo_0_next_obs.csv,94,joint_position[19],m,robot_1 arm_l3_joint measured position,3.565846327546751e-06
+demo_0_next_obs.csv,95,joint_position[20],m,robot_1 arm_l4_joint measured position,2.887615892177564e-06
+demo_0_next_obs.csv,96,joint_position[21],rad,robot_1 wrist_yaw_joint measured position,-3.725759142980678e-06
+demo_0_next_obs.csv,97,joint_position[22],rad,robot_1 wrist_pitch_joint measured position,1.611861399908321e-08
+demo_0_next_obs.csv,98,joint_position[23],rad,robot_1 wrist_roll_joint measured position,-4.2588715132296784e-07
+demo_0_next_obs.csv,99,joint_position[24],rad,robot_1 gripper_finger_left_joint measured position,0.10939454287290573
+demo_0_next_obs.csv,100,joint_position[25],rad,robot_1 gripper_finger_right_joint measured position,0.10938209295272827
+demo_0_next_obs.csv,101,joint_velocity[0],rad/s,robot_0 wheel_0_joint measured velocity,-9.170152225124184e-06
+demo_0_next_obs.csv,102,joint_velocity[1],rad/s,robot_0 wheel_1_joint measured velocity,-8.693866220710333e-06
+demo_0_next_obs.csv,103,joint_velocity[2],rad/s,robot_0 wheel_2_joint measured velocity,1.7872311218525283e-05
+demo_0_next_obs.csv,104,joint_velocity[3],m/s,robot_0 lift_joint measured velocity,-1.0589531029836508e-06
+demo_0_next_obs.csv,105,joint_velocity[4],m/s,robot_0 arm_l1_joint measured velocity,6.865613249829039e-05
+demo_0_next_obs.csv,106,joint_velocity[5],m/s,robot_0 arm_l2_joint measured velocity,0.00010288313205819577
+demo_0_next_obs.csv,107,joint_velocity[6],m/s,robot_0 arm_l3_joint measured velocity,0.00010406469664303586
+demo_0_next_obs.csv,108,joint_velocity[7],m/s,robot_0 arm_l4_joint measured velocity,7.752246165182441e-05
+demo_0_next_obs.csv,109,joint_velocity[8],rad/s,robot_0 wrist_yaw_joint measured velocity,7.054365414660424e-05
+demo_0_next_obs.csv,110,joint_velocity[9],rad/s,robot_0 wrist_pitch_joint measured velocity,8.305394658236764e-06
+demo_0_next_obs.csv,111,joint_velocity[10],rad/s,robot_0 wrist_roll_joint measured velocity,4.354144039098173e-06
+demo_0_next_obs.csv,112,joint_velocity[11],rad/s,robot_0 gripper_finger_left_joint measured velocity,1.9609719514846802
+demo_0_next_obs.csv,113,joint_velocity[12],rad/s,robot_0 gripper_finger_right_joint measured velocity,1.9611858129501343
+demo_0_next_obs.csv,114,joint_velocity[13],rad/s,robot_1 wheel_0_joint measured velocity,-9.165744813799392e-06
+demo_0_next_obs.csv,115,joint_velocity[14],rad/s,robot_1 wheel_1_joint measured velocity,-8.69418727234006e-06
+demo_0_next_obs.csv,116,joint_velocity[15],rad/s,robot_1 wheel_2_joint measured velocity,1.786810753401369e-05
+demo_0_next_obs.csv,117,joint_velocity[16],m/s,robot_1 lift_joint measured velocity,-9.46385114275472e-07
+demo_0_next_obs.csv,118,joint_velocity[17],m/s,robot_1 arm_l1_joint measured velocity,6.865605973871425e-05
+demo_0_next_obs.csv,119,joint_velocity[18],m/s,robot_1 arm_l2_joint measured velocity,0.00010288287739967927
+demo_0_next_obs.csv,120,joint_velocity[19],m/s,robot_1 arm_l3_joint measured velocity,0.00010406385263195261
+demo_0_next_obs.csv,121,joint_velocity[20],m/s,robot_1 arm_l4_joint measured velocity,7.752259261906147e-05
+demo_0_next_obs.csv,122,joint_velocity[21],rad/s,robot_1 wrist_yaw_joint measured velocity,7.055663445498794e-05
+demo_0_next_obs.csv,123,joint_velocity[22],rad/s,robot_1 wrist_pitch_joint measured velocity,8.403872925555333e-06
+demo_0_next_obs.csv,124,joint_velocity[23],rad/s,robot_1 wrist_roll_joint measured velocity,4.353093117970275e-06
+demo_0_next_obs.csv,125,joint_velocity[24],rad/s,robot_1 gripper_finger_left_joint measured velocity,1.9609719514846802
+demo_0_next_obs.csv,126,joint_velocity[25],rad/s,robot_1 gripper_finger_right_joint measured velocity,1.9611854553222656
+demo_0_next_obs.csv,127,previous_action[0],"normalized [-1,1]",robot_0 previous base_forward_velocity,0.0
+demo_0_next_obs.csv,128,previous_action[1],"normalized [-1,1]",robot_0 previous base_left_velocity,-0.0
+demo_0_next_obs.csv,129,previous_action[2],"normalized [-1,1]",robot_0 previous base_yaw_velocity,0.0
+demo_0_next_obs.csv,130,previous_action[3],"normalized [-1,1]",robot_0 previous lift_velocity,0.0
+demo_0_next_obs.csv,131,previous_action[4],"normalized [-1,1]",robot_0 previous arm_extension_velocity,0.0
+demo_0_next_obs.csv,132,previous_action[5],"normalized [-1,1]",robot_0 previous wrist_yaw_velocity,0.0
+demo_0_next_obs.csv,133,previous_action[6],"normalized [-1,1]",robot_0 previous wrist_pitch_velocity,0.0
+demo_0_next_obs.csv,134,previous_action[7],"normalized [-1,1]",robot_0 previous wrist_roll_velocity,0.0
+demo_0_next_obs.csv,135,previous_action[8],"normalized [-1,1]",robot_0 previous gripper_command,0.0
+demo_0_next_obs.csv,136,previous_action[9],"normalized [-1,1]",robot_1 previous base_forward_velocity,0.0
+demo_0_next_obs.csv,137,previous_action[10],"normalized [-1,1]",robot_1 previous base_left_velocity,-0.0
+demo_0_next_obs.csv,138,previous_action[11],"normalized [-1,1]",robot_1 previous base_yaw_velocity,0.0
+demo_0_next_obs.csv,139,previous_action[12],"normalized [-1,1]",robot_1 previous lift_velocity,0.0
+demo_0_next_obs.csv,140,previous_action[13],"normalized [-1,1]",robot_1 previous arm_extension_velocity,0.0
+demo_0_next_obs.csv,141,previous_action[14],"normalized [-1,1]",robot_1 previous wrist_yaw_velocity,0.0
+demo_0_next_obs.csv,142,previous_action[15],"normalized [-1,1]",robot_1 previous wrist_pitch_velocity,0.0
+demo_0_next_obs.csv,143,previous_action[16],"normalized [-1,1]",robot_1 previous wrist_roll_velocity,0.0
+demo_0_next_obs.csv,144,previous_action[17],"normalized [-1,1]",robot_1 previous gripper_command,0.0
+demo_0_next_obs.csv,145,simulation_time_s[0],s,simulation_time_s original shape=scalar; indices=(),0.058333336375653744
+demo_0_obs.csv,0,sample,index,"Action step index within the episode, starting at 0",0
+demo_0_obs.csv,1,base_pose_world[0],m,robot_0 base_pose_world x; world,-1.0665600299835205
+demo_0_obs.csv,2,base_pose_world[1],m,robot_0 base_pose_world y; world,-0.13899995386600494
+demo_0_obs.csv,3,base_pose_world[2],m,robot_0 base_pose_world z; world,0.029489098116755486
+demo_0_obs.csv,4,base_pose_world[3],unit quaternion,robot_0 base_pose_world qw; world,-0.7071067690849304
+demo_0_obs.csv,5,base_pose_world[4],unit quaternion,robot_0 base_pose_world qx; world,0.0
+demo_0_obs.csv,6,base_pose_world[5],unit quaternion,robot_0 base_pose_world qy; world,0.0
+demo_0_obs.csv,7,base_pose_world[6],unit quaternion,robot_0 base_pose_world qz; world,0.7071067690849304
+demo_0_obs.csv,8,base_pose_world[7],m,robot_1 base_pose_world x; world,1.0665600299835205
+demo_0_obs.csv,9,base_pose_world[8],m,robot_1 base_pose_world y; world,-0.13899995386600494
+demo_0_obs.csv,10,base_pose_world[9],m,robot_1 base_pose_world z; world,0.029489098116755486
+demo_0_obs.csv,11,base_pose_world[10],unit quaternion,robot_1 base_pose_world qw; world,-0.7071067690849304
+demo_0_obs.csv,12,base_pose_world[11],unit quaternion,robot_1 base_pose_world qx; world,0.0
+demo_0_obs.csv,13,base_pose_world[12],unit quaternion,robot_1 base_pose_world qy; world,0.0
+demo_0_obs.csv,14,base_pose_world[13],unit quaternion,robot_1 base_pose_world qz; world,0.7071067690849304
+demo_0_obs.csv,15,base_twist_world[0],m/s,robot_0 world vx,9.462813865823705e-10
+demo_0_obs.csv,16,base_twist_world[1],m/s,robot_0 world vy,-1.6570193828169266e-10
+demo_0_obs.csv,17,base_twist_world[2],m/s,robot_0 world vz,-0.08174999803304672
+demo_0_obs.csv,18,base_twist_world[3],rad/s,robot_0 world wx,-7.767004261971522e-10
+demo_0_obs.csv,19,base_twist_world[4],rad/s,robot_0 world wy,-1.7710602984166712e-09
+demo_0_obs.csv,20,base_twist_world[5],rad/s,robot_0 world wz,6.59964083382647e-10
+demo_0_obs.csv,21,base_twist_world[6],m/s,robot_1 world vx,4.794838970312298e-10
+demo_0_obs.csv,22,base_twist_world[7],m/s,robot_1 world vy,-1.156660392465092e-10
+demo_0_obs.csv,23,base_twist_world[8],m/s,robot_1 world vz,-0.08174999803304672
+demo_0_obs.csv,24,base_twist_world[9],rad/s,robot_1 world wx,-1.778114183670354e-10
+demo_0_obs.csv,25,base_twist_world[10],rad/s,robot_1 world wy,-8.422916808470404e-10
+demo_0_obs.csv,26,base_twist_world[11],rad/s,robot_1 world wz,-6.99528213132794e-10
+demo_0_obs.csv,27,controller_target[0],m,robot_0 controller_target lift,0.0
+demo_0_obs.csv,28,controller_target[1],m,robot_0 controller_target arm,0.0
+demo_0_obs.csv,29,controller_target[2],rad,robot_0 controller_target yaw,0.0
+demo_0_obs.csv,30,controller_target[3],rad,robot_0 controller_target pitch,0.0
+demo_0_obs.csv,31,controller_target[4],rad,robot_0 controller_target roll,0.0
+demo_0_obs.csv,32,controller_target[5],rad,robot_0 controller_target grip_pos,0.5
+demo_0_obs.csv,33,controller_target[6],m/s,robot_0 controller_target base_fwd,0.0
+demo_0_obs.csv,34,controller_target[7],m/s,robot_0 controller_target base_strafe,0.0
+demo_0_obs.csv,35,controller_target[8],rad/s,robot_0 controller_target base_turn,0.0
+demo_0_obs.csv,36,controller_target[9],m,robot_1 controller_target lift,0.0
+demo_0_obs.csv,37,controller_target[10],m,robot_1 controller_target arm,0.0
+demo_0_obs.csv,38,controller_target[11],rad,robot_1 controller_target yaw,0.0
+demo_0_obs.csv,39,controller_target[12],rad,robot_1 controller_target pitch,0.0
+demo_0_obs.csv,40,controller_target[13],rad,robot_1 controller_target roll,0.0
+demo_0_obs.csv,41,controller_target[14],rad,robot_1 controller_target grip_pos,0.5
+demo_0_obs.csv,42,controller_target[15],m/s,robot_1 controller_target base_fwd,0.0
+demo_0_obs.csv,43,controller_target[16],m/s,robot_1 controller_target base_strafe,0.0
+demo_0_obs.csv,44,controller_target[17],rad/s,robot_1 controller_target base_turn,0.0
+demo_0_obs.csv,45,fingertip_origin_distance[0],m,robot_0 distance between fingertip link origins,0.00018525127961765975
+demo_0_obs.csv,46,fingertip_origin_distance[1],m,robot_1 distance between fingertip link origins,0.00018531088426243514
+demo_0_obs.csv,47,fingertip_position_base[0],m,robot_0 fingertip link 0 x in base,0.46011877059936523
+demo_0_obs.csv,48,fingertip_position_base[1],m,robot_0 fingertip link 0 y in base,-0.08732724189758301
+demo_0_obs.csv,49,fingertip_position_base[2],m,robot_0 fingertip link 0 z in base,0.1782211810350418
+demo_0_obs.csv,50,fingertip_position_base[3],m,robot_0 fingertip link 1 x in base,0.4601188898086548
+demo_0_obs.csv,51,fingertip_position_base[4],m,robot_0 fingertip link 1 y in base,-0.08751249313354492
+demo_0_obs.csv,52,fingertip_position_base[5],m,robot_0 fingertip link 1 z in base,0.17822124063968658
+demo_0_obs.csv,53,fingertip_position_base[6],m,robot_1 fingertip link 0 x in base,0.46011877059936523
+demo_0_obs.csv,54,fingertip_position_base[7],m,robot_1 fingertip link 0 y in base,-0.08732712268829346
+demo_0_obs.csv,55,fingertip_position_base[8],m,robot_1 fingertip link 0 z in base,0.1782211810350418
+demo_0_obs.csv,56,fingertip_position_base[9],m,robot_1 fingertip link 1 x in base,0.4601188898086548
+demo_0_obs.csv,57,fingertip_position_base[10],m,robot_1 fingertip link 1 y in base,-0.08751243352890015
+demo_0_obs.csv,58,fingertip_position_base[11],m,robot_1 fingertip link 1 z in base,0.17822124063968658
+demo_0_obs.csv,59,grasp_pose_base[0],m,robot_0 grasp_pose_base x; robot base,0.4662579894065857
+demo_0_obs.csv,60,grasp_pose_base[1],m,robot_0 grasp_pose_base y; robot base,-0.08741927146911621
+demo_0_obs.csv,61,grasp_pose_base[2],m,robot_0 grasp_pose_base z; robot base,0.17822052538394928
+demo_0_obs.csv,62,grasp_pose_base[3],unit quaternion,robot_0 grasp_pose_base qw; robot base,1.0
+demo_0_obs.csv,63,grasp_pose_base[4],unit quaternion,robot_0 grasp_pose_base qx; robot base,-1.495505941306874e-08
+demo_0_obs.csv,64,grasp_pose_base[5],unit quaternion,robot_0 grasp_pose_base qy; robot base,1.0294523633547215e-07
+demo_0_obs.csv,65,grasp_pose_base[6],unit quaternion,robot_0 grasp_pose_base qz; robot base,-1.2644055402688537e-07
+demo_0_obs.csv,66,grasp_pose_base[7],m,robot_1 grasp_pose_base x; robot base,0.4662579894065857
+demo_0_obs.csv,67,grasp_pose_base[8],m,robot_1 grasp_pose_base y; robot base,-0.08741927146911621
+demo_0_obs.csv,68,grasp_pose_base[9],m,robot_1 grasp_pose_base z; robot base,0.17822052538394928
+demo_0_obs.csv,69,grasp_pose_base[10],unit quaternion,robot_1 grasp_pose_base qw; robot base,1.0
+demo_0_obs.csv,70,grasp_pose_base[11],unit quaternion,robot_1 grasp_pose_base qx; robot base,-1.495505941306874e-08
+demo_0_obs.csv,71,grasp_pose_base[12],unit quaternion,robot_1 grasp_pose_base qy; robot base,1.0294523633547215e-07
+demo_0_obs.csv,72,grasp_pose_base[13],unit quaternion,robot_1 grasp_pose_base qz; robot base,-1.2644055402688537e-07
+demo_0_obs.csv,73,gripper_close_command[0],bool,robot_0 close intent; not ground-truth grasp success,0.0
+demo_0_obs.csv,74,gripper_close_command[1],bool,robot_1 close intent; not ground-truth grasp success,0.0
+demo_0_obs.csv,75,joint_position[0],rad,robot_0 wheel_0_joint measured position,3.799934325532384e-12
+demo_0_obs.csv,76,joint_position[1],rad,robot_0 wheel_1_joint measured position,-6.231965464509326e-12
+demo_0_obs.csv,77,joint_position[2],rad,robot_0 wheel_2_joint measured position,2.6987897593783172e-12
+demo_0_obs.csv,78,joint_position[3],m,robot_0 lift_joint measured position,5.7497964722763584e-11
+demo_0_obs.csv,79,joint_position[4],m,robot_0 arm_l1_joint measured position,-6.834139645254395e-14
+demo_0_obs.csv,80,joint_position[5],m,robot_0 arm_l2_joint measured position,-8.764681553230166e-14
+demo_0_obs.csv,81,joint_position[6],m,robot_0 arm_l3_joint measured position,-1.1549997611971785e-13
+demo_0_obs.csv,82,joint_position[7],m,robot_0 arm_l4_joint measured position,-2.050139910809469e-14
+demo_0_obs.csv,83,joint_position[8],rad,robot_0 wrist_yaw_joint measured position,-4.264325004221803e-10
+demo_0_obs.csv,84,joint_position[9],rad,robot_0 wrist_pitch_joint measured position,1.0488466761771065e-09
+demo_0_obs.csv,85,joint_position[10],rad,robot_0 wrist_roll_joint measured position,-3.4534464177227164e-10
+demo_0_obs.csv,86,joint_position[11],rad,robot_0 gripper_finger_left_joint measured position,6.01926231080796e-10
+demo_0_obs.csv,87,joint_position[12],rad,robot_0 gripper_finger_right_joint measured position,2.0659201346168166e-14
+demo_0_obs.csv,88,joint_position[13],rad,robot_1 wheel_0_joint measured position,3.171515784369805e-12
+demo_0_obs.csv,89,joint_position[14],rad,robot_1 wheel_1_joint measured position,-3.71142309593675e-12
+demo_0_obs.csv,90,joint_position[15],rad,robot_1 wheel_2_joint measured position,9.335365596871426e-13
+demo_0_obs.csv,91,joint_position[16],m,robot_1 lift_joint measured position,-3.063071671305373e-11
+demo_0_obs.csv,92,joint_position[17],m,robot_1 arm_l1_joint measured position,1.7593848470123796e-12
+demo_0_obs.csv,93,joint_position[18],m,robot_1 arm_l2_joint measured position,1.6588832087507943e-12
+demo_0_obs.csv,94,joint_position[19],m,robot_1 arm_l3_joint measured position,1.459662902700276e-12
+demo_0_obs.csv,95,joint_position[20],m,robot_1 arm_l4_joint measured position,-1.9967478242540046e-15
+demo_0_obs.csv,96,joint_position[21],rad,robot_1 wrist_yaw_joint measured position,-1.0826533419772133e-10
+demo_0_obs.csv,97,joint_position[22],rad,robot_1 wrist_pitch_joint measured position,3.117072155944811e-10
+demo_0_obs.csv,98,joint_position[23],rad,robot_1 wrist_roll_joint measured position,-6.321320550339848e-11
+demo_0_obs.csv,99,joint_position[24],rad,robot_1 gripper_finger_left_joint measured position,6.632851212717839e-11
+demo_0_obs.csv,100,joint_position[25],rad,robot_1 gripper_finger_right_joint measured position,1.2574463692516247e-10
+demo_0_obs.csv,101,joint_velocity[0],rad/s,robot_0 wheel_0_joint measured velocity,1.8773052556930736e-10
+demo_0_obs.csv,102,joint_velocity[1],rad/s,robot_0 wheel_1_joint measured velocity,-9.7031072066045e-10
+demo_0_obs.csv,103,joint_velocity[2],rad/s,robot_0 wheel_2_joint measured velocity,8.027210007810481e-10
+demo_0_obs.csv,104,joint_velocity[3],m/s,robot_0 lift_joint measured velocity,2.245032248993084e-08
+demo_0_obs.csv,105,joint_velocity[4],m/s,robot_0 arm_l1_joint measured velocity,-1.9994575439774565e-11
+demo_0_obs.csv,106,joint_velocity[5],m/s,robot_0 arm_l2_joint measured velocity,-2.982953120622689e-11
+demo_0_obs.csv,107,joint_velocity[6],m/s,robot_0 arm_l3_joint measured velocity,1.0837395425511431e-09
+demo_0_obs.csv,108,joint_velocity[7],m/s,robot_0 arm_l4_joint measured velocity,3.976762252833055e-10
+demo_0_obs.csv,109,joint_velocity[8],rad/s,robot_0 wrist_yaw_joint measured velocity,-1.129016737877464e-07
+demo_0_obs.csv,110,joint_velocity[9],rad/s,robot_0 wrist_pitch_joint measured velocity,2.609770035633119e-07
+demo_0_obs.csv,111,joint_velocity[10],rad/s,robot_0 wrist_roll_joint measured velocity,-9.109066922974307e-08
+demo_0_obs.csv,112,joint_velocity[11],rad/s,robot_0 gripper_finger_left_joint measured velocity,1.404325189469091e-07
+demo_0_obs.csv,113,joint_velocity[12],rad/s,robot_0 gripper_finger_right_joint measured velocity,7.583277755740525e-12
+demo_0_obs.csv,114,joint_velocity[13],rad/s,robot_1 wheel_0_joint measured velocity,4.4193419757032615e-11
+demo_0_obs.csv,115,joint_velocity[14],rad/s,robot_1 wheel_1_joint measured velocity,-3.1079977480530374e-10
+demo_0_obs.csv,116,joint_velocity[15],rad/s,robot_1 wheel_2_joint measured velocity,3.133900083884811e-10
+demo_0_obs.csv,117,joint_velocity[16],m/s,robot_1 lift_joint measured velocity,-9.650584331666323e-09
+demo_0_obs.csv,118,joint_velocity[17],m/s,robot_1 arm_l1_joint measured velocity,1.2468988341840515e-10
+demo_0_obs.csv,119,joint_velocity[18],m/s,robot_1 arm_l2_joint measured velocity,1.1489063866942928e-10
+demo_0_obs.csv,120,joint_velocity[19],m/s,robot_1 arm_l3_joint measured velocity,1.0369074349148022e-10
+demo_0_obs.csv,121,joint_velocity[20],m/s,robot_1 arm_l4_joint measured velocity,2.5177095651363057e-12
+demo_0_obs.csv,122,joint_velocity[21],rad/s,robot_1 wrist_yaw_joint measured velocity,3.669635262326665e-08
+demo_0_obs.csv,123,joint_velocity[22],rad/s,robot_1 wrist_pitch_joint measured velocity,-1.6831145366325018e-09
+demo_0_obs.csv,124,joint_velocity[23],rad/s,robot_1 wrist_roll_joint measured velocity,4.754455318334294e-08
+demo_0_obs.csv,125,joint_velocity[24],rad/s,robot_1 gripper_finger_left_joint measured velocity,-8.97162166779708e-08
+demo_0_obs.csv,126,joint_velocity[25],rad/s,robot_1 gripper_finger_right_joint measured velocity,7.938930224327123e-08
+demo_0_obs.csv,127,previous_action[0],"normalized [-1,1]",robot_0 previous base_forward_velocity,0.0
+demo_0_obs.csv,128,previous_action[1],"normalized [-1,1]",robot_0 previous base_left_velocity,0.0
+demo_0_obs.csv,129,previous_action[2],"normalized [-1,1]",robot_0 previous base_yaw_velocity,0.0
+demo_0_obs.csv,130,previous_action[3],"normalized [-1,1]",robot_0 previous lift_velocity,0.0
+demo_0_obs.csv,131,previous_action[4],"normalized [-1,1]",robot_0 previous arm_extension_velocity,0.0
+demo_0_obs.csv,132,previous_action[5],"normalized [-1,1]",robot_0 previous wrist_yaw_velocity,0.0
+demo_0_obs.csv,133,previous_action[6],"normalized [-1,1]",robot_0 previous wrist_pitch_velocity,0.0
+demo_0_obs.csv,134,previous_action[7],"normalized [-1,1]",robot_0 previous wrist_roll_velocity,0.0
+demo_0_obs.csv,135,previous_action[8],"normalized [-1,1]",robot_0 previous gripper_command,0.0
+demo_0_obs.csv,136,previous_action[9],"normalized [-1,1]",robot_1 previous base_forward_velocity,0.0
+demo_0_obs.csv,137,previous_action[10],"normalized [-1,1]",robot_1 previous base_left_velocity,0.0
+demo_0_obs.csv,138,previous_action[11],"normalized [-1,1]",robot_1 previous base_yaw_velocity,0.0
+demo_0_obs.csv,139,previous_action[12],"normalized [-1,1]",robot_1 previous lift_velocity,0.0
+demo_0_obs.csv,140,previous_action[13],"normalized [-1,1]",robot_1 previous arm_extension_velocity,0.0
+demo_0_obs.csv,141,previous_action[14],"normalized [-1,1]",robot_1 previous wrist_yaw_velocity,0.0
+demo_0_obs.csv,142,previous_action[15],"normalized [-1,1]",robot_1 previous wrist_pitch_velocity,0.0
+demo_0_obs.csv,143,previous_action[16],"normalized [-1,1]",robot_1 previous wrist_roll_velocity,0.0
+demo_0_obs.csv,144,previous_action[17],"normalized [-1,1]",robot_1 previous gripper_command,0.0
+demo_0_obs.csv,145,simulation_time_s[0],s,simulation_time_s original shape=scalar; indices=(),0.008333333767950535
+video_frame_index.csv,0,video_frame,index,Preview MP4 frame number,0
+video_frame_index.csv,1,video_time_s,s,Preview MP4 playback time; not the original observation time,0.0
+video_frame_index.csv,2,episode,name,HDF5 episode this observation belongs to,demo_0
+video_frame_index.csv,3,observation_frame,index,"Observation index in the original episode, including the last next_obs",0
+video_frame_index.csv,4,simulation_time_s,s,Simulation time of the original observation,0.008333333767950535
+video_frame_index.csv,5,physics_tick,tick,"Physics tick in the raw log, 240 Hz",0

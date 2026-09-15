@@ -1,0 +1,515 @@
+{
+  "schema_version": "0.3.0",
+  "status": "experimental_learning_environment",
+  "task": "two_robot_seated_human_tshirt_dressing",
+  "default_dimensions": {
+    "robots": 2,
+    "joints": 13,
+    "cameras": 5,
+    "height": 256,
+    "width": 256
+  },
+  "frames": {
+    "world": "right-handed, Z up; metres; fixed calibrated workspace frame",
+    "base": "base_footprint; X forward, Y left, Z up",
+    "camera_optical": "X right, Y down, Z forward; explicit conversion from USD required",
+    "pose_layout": [
+      "x",
+      "y",
+      "z",
+      "qw",
+      "qx",
+      "qy",
+      "qz"
+    ],
+    "joint_units": "read per-joint units from the live manifest; rad for revolute, m for prismatic"
+  },
+  "timing": {
+    "policy_hz": 20,
+    "control_hz": 60,
+    "physics_hz": 240,
+    "control_ticks_per_action": 3,
+    "physics_steps_per_action": 12,
+    "time_basis": "simulation time; GUI wall time is not a policy clock"
+  },
+  "cameras": [
+    {
+      "id": "overview",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount": "human_spawn",
+      "spawn_prim_path": "/World/Human",
+      "placement": "reference world pose transformed by human randomSpawn at episode reset; fixed during rollout",
+      "eye_world_m": [
+        0.0,
+        2.8,
+        2.25
+      ],
+      "target_world_m": [
+        0.0,
+        0.45,
+        1.0
+      ],
+      "clip_m": [
+        0.05,
+        10.0
+      ],
+      "horizontal_fov_deg": 60
+    },
+    {
+      "id": "robot_0_wrist",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "gripper_camera_link",
+      "optical_extrinsic": "fixed configurable mount-local look-at; returned as matrix in info",
+      "clip_m": [
+        0.03,
+        3.0
+      ],
+      "eye_mount_m": [
+        0,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        -0.075,
+        -0.35,
+        0
+      ],
+      "up_mount": [
+        1,
+        0,
+        0
+      ],
+      "horizontal_fov_deg": 70
+    },
+    {
+      "id": "robot_1_wrist",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "gripper_camera_link",
+      "optical_extrinsic": "fixed configurable mount-local look-at; returned as matrix in info",
+      "clip_m": [
+        0.03,
+        3.0
+      ],
+      "eye_mount_m": [
+        0,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        -0.075,
+        -0.35,
+        0
+      ],
+      "up_mount": [
+        1,
+        0,
+        0
+      ],
+      "horizontal_fov_deg": 70
+    },
+    {
+      "id": "robot_0_head",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "camera_center_link",
+      "optical_extrinsic": "fixed mount-local view; +X forward and -Z image up; model tilt about 35 degrees downward",
+      "clip_m": [
+        0.05,
+        5.0
+      ],
+      "eye_mount_m": [
+        0.0017,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        1.0017,
+        0,
+        0
+      ],
+      "up_mount": [
+        0,
+        0,
+        -1
+      ],
+      "horizontal_fov_deg": 70
+    },
+    {
+      "id": "robot_1_head",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "camera_center_link",
+      "optical_extrinsic": "fixed mount-local view; +X forward and -Z image up; model tilt about 35 degrees downward",
+      "clip_m": [
+        0.05,
+        5.0
+      ],
+      "eye_mount_m": [
+        0.0017,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        1.0017,
+        0,
+        0
+      ],
+      "up_mount": [
+        0,
+        0,
+        -1
+      ],
+      "horizontal_fov_deg": 70
+    }
+  ],
+  "controller_target_columns": [
+    "lift",
+    "arm",
+    "yaw",
+    "pitch",
+    "roll",
+    "grip_pos",
+    "base_fwd",
+    "base_strafe",
+    "base_turn"
+  ],
+  "observations": {
+    "joint_position": {
+      "shape": [
+        "robots",
+        "joints"
+      ],
+      "dtype": "float32",
+      "units": "per_joint",
+      "availability": "measured"
+    },
+    "joint_velocity": {
+      "shape": [
+        "robots",
+        "joints"
+      ],
+      "dtype": "float32",
+      "units": "per_joint_per_s",
+      "availability": "measured"
+    },
+    "base_pose_world": {
+      "shape": [
+        "robots",
+        7
+      ],
+      "dtype": "float32",
+      "frame": "world",
+      "availability": "measured"
+    },
+    "base_twist_world": {
+      "shape": [
+        "robots",
+        6
+      ],
+      "dtype": "float32",
+      "units": "m/s then rad/s",
+      "frame": "world",
+      "availability": "measured"
+    },
+    "grasp_pose_base": {
+      "shape": [
+        "robots",
+        7
+      ],
+      "dtype": "float32",
+      "frame": "base",
+      "availability": "measured"
+    },
+    "fingertip_position_base": {
+      "shape": [
+        "robots",
+        2,
+        3
+      ],
+      "dtype": "float32",
+      "units": "m",
+      "frame": "base",
+      "availability": "measured"
+    },
+    "fingertip_origin_distance": {
+      "shape": [
+        "robots",
+        1
+      ],
+      "dtype": "float32",
+      "units": "m; not the inner contact-surface gap",
+      "availability": "measured"
+    },
+    "controller_target": {
+      "shape": [
+        "robots",
+        9
+      ],
+      "dtype": "float32",
+      "units": "see controller_target_columns and runtime joint manifest",
+      "availability": "measured"
+    },
+    "gripper_close_command": {
+      "shape": [
+        "robots",
+        1
+      ],
+      "dtype": "bool",
+      "availability": "measured"
+    },
+    "simulation_time_s": {
+      "shape": [],
+      "dtype": "float64",
+      "units": "s",
+      "availability": "measured"
+    },
+    "rgb": {
+      "shape": [
+        "cameras",
+        "height",
+        "width",
+        3
+      ],
+      "dtype": "uint8",
+      "range": [
+        0,
+        255
+      ],
+      "availability": "sensor_or_action"
+    },
+    "depth": {
+      "shape": [
+        "cameras",
+        "height",
+        "width",
+        1
+      ],
+      "dtype": "float32",
+      "units": "optical-axis Z in m; invalid pixels zero",
+      "availability": "sensor_or_action"
+    },
+    "depth_valid": {
+      "shape": [
+        "cameras",
+        "height",
+        "width",
+        1
+      ],
+      "dtype": "bool",
+      "availability": "sensor_or_action"
+    },
+    "previous_action": {
+      "shape": [
+        "robots",
+        9
+      ],
+      "dtype": "float32",
+      "range": [
+        -1,
+        1
+      ],
+      "availability": "sensor_or_action"
+    }
+  },
+  "profiles": {
+    "measured_state": {
+      "include_availability": [
+        "measured"
+      ],
+      "status": "implemented"
+    },
+    "actor_rgbd": {
+      "include_availability": [
+        "measured",
+        "sensor_or_action"
+      ],
+      "status": "implemented",
+      "note": "Robot world pose is ideal simulator localization; this is not noisy hardware odometry."
+    },
+    "privileged_debug": {
+      "status": "separate_npz_and_json_not_default_actor_input",
+      "fields": [
+        "cloth_world_positions",
+        "cloth_world_velocities",
+        "cloth_triangles",
+        "human_pose",
+        "chair_pose",
+        "grasp_attached",
+        "native_attachment_present"
+      ]
+    }
+  },
+  "action": {
+    "shape": [
+      "robots",
+      9
+    ],
+    "dtype": "float32",
+    "range": [
+      -1,
+      1
+    ],
+    "invalid_values": "reject wrong shape, NaN, Inf or out-of-range values; never silently reinterpret units",
+    "robot_order": [
+      "/World/Stretch4",
+      "/World/Stretch4_2"
+    ],
+    "fields": [
+      {
+        "name": "base_forward_velocity",
+        "unit": "m/s",
+        "runtime_scale": "BASE_LINEAR_RATE",
+        "backend_key": "base_fwd",
+        "backend_sign": 1
+      },
+      {
+        "name": "base_left_velocity",
+        "unit": "m/s",
+        "runtime_scale": "BASE_LINEAR_RATE",
+        "backend_key": "base_strafe",
+        "backend_sign": -1
+      },
+      {
+        "name": "base_yaw_velocity",
+        "unit": "rad/s; positive CCW about +Z",
+        "runtime_scale": "BASE_ANGULAR_RATE",
+        "backend_key": "base_turn",
+        "backend_sign": 1
+      },
+      {
+        "name": "lift_velocity",
+        "unit": "m/s",
+        "runtime_scale": "LIFT_RATE",
+        "backend_key": "lift_rate",
+        "backend_sign": 1
+      },
+      {
+        "name": "arm_extension_velocity",
+        "unit": "m/s; total of four telescoping joints",
+        "runtime_scale": "ARM_RATE",
+        "backend_key": "arm_rate",
+        "backend_sign": 1
+      },
+      {
+        "name": "wrist_yaw_velocity",
+        "unit": "rad/s",
+        "runtime_scale": "WRIST_RATE",
+        "backend_key": "yaw_rate",
+        "backend_sign": 1
+      },
+      {
+        "name": "wrist_pitch_velocity",
+        "unit": "rad/s",
+        "runtime_scale": "WRIST_RATE",
+        "backend_key": "pitch_rate",
+        "backend_sign": 1
+      },
+      {
+        "name": "wrist_roll_velocity",
+        "unit": "rad/s",
+        "runtime_scale": "WRIST_RATE",
+        "backend_key": "roll_rate",
+        "backend_sign": 1
+      },
+      {
+        "name": "gripper_command",
+        "unit": "intent; no geometric teleport",
+        "open_below": -0.5,
+        "close_above": 0.5,
+        "otherwise": "hold previous intent"
+      }
+    ],
+    "continuous_actuation_status": "implemented via shared teleop controller",
+    "base_actuation_current": "bounded root-wrench velocity servo, not wheel angular velocity control"
+  },
+  "transition": {
+    "fields": [
+      "observation",
+      "action_requested",
+      "controller_targets_applied",
+      "reward",
+      "terminated",
+      "truncated",
+      "next_observation",
+      "info"
+    ],
+    "info_fields": [
+      "schema_version",
+      "source_commit",
+      "source_hashes",
+      "resolved_config",
+      "episode_seed",
+      "episode_id",
+      "step_id",
+      "simulation_time_s",
+      "joint_names",
+      "joint_units",
+      "camera_intrinsics",
+      "camera_poses",
+      "camera_timestamps",
+      "termination_reason",
+      "human_spawn",
+      "garment_spawn"
+    ],
+    "reward_and_success": "default reward zero and no success termination; replaceable evaluator(previous, action, next, info) returns reward, terminated, task_info"
+  },
+  "competition_access": {
+    "rules": "docs/POLICY_DATASET.md",
+    "allowed_policy_observations": [
+      "joint_position",
+      "joint_velocity",
+      "base_pose_world",
+      "base_twist_world",
+      "grasp_pose_base",
+      "fingertip_position_base",
+      "fingertip_origin_distance",
+      "controller_target",
+      "gripper_close_command",
+      "simulation_time_s",
+      "rgb",
+      "depth",
+      "depth_valid",
+      "previous_action"
+    ],
+    "allowed_action": "normalized float32 (2,9) defined in action; no direct scene mutation",
+    "allowed_cameras": [
+      "overview",
+      "robot_0_wrist",
+      "robot_1_wrist",
+      "robot_0_head",
+      "robot_1_head"
+    ],
+    "robot_world_localization": "permitted ideal simulator localization; other objects world poses are forbidden",
+    "forbidden_in_training_and_inference": [
+      "cloth vertex/particle state",
+      "object/mannequin/chair ground-truth pose",
+      "ground-truth segmentation",
+      "native grasp/anchor state",
+      "collision mesh or evaluator internal geometry",
+      "privileged teacher or demonstration generation",
+      "raw trajectory playback as a policy",
+      "free GUI viewport images"
+    ],
+    "audit_data": "not policy inputs; scores/success for reporting and demonstration selection only",
+    "enforcement": "Confirmed violations in organizer verification exclude the submission from judging; local schema checks are not a security sandbox"
+  },
+  "training_recording": {
+    "enabled_by": "./run.sh gui --training-record 1",
+    "schema": "phyrc-policy-dataset-v1",
+    "format": "robomimic-style HDF5; lossless LZF",
+    "sampling": "20Hz sample-and-hold; commands applied for 3 control ticks / 12 physics ticks; no averaging",
+    "alignment": "20Hz boundary states/camera poses recorded live; images rendered from those exact states after capture, without a new physics solve",
+    "actions_on_disk": [
+      18
+    ],
+    "raw_recording": "automatically preserved at 240Hz",
+    "audit": "separate audit.hdf5 and evaluation JSON, never returned by PolicyDataset",
+    "backpressure": "bounded asynchronous raw archive; block without dropping; HDF5 generation after teleop",
+    "default_render_mode": "deferred",
+    "live_render_option": "--training-render live",
+    "automatic_export": "run.sh gui starts separate headless exporter after a complete capture; wait for READY"
+  }
+}

@@ -1,0 +1,457 @@
+{
+  "data/demo_0/actions": {
+    "shape": [
+      1142,
+      18
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/dones": {
+    "shape": [
+      1142
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/next_obs/base_pose_world": {
+    "shape": [
+      1142,
+      14
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/base_twist_world": {
+    "shape": [
+      1142,
+      12
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/controller_target": {
+    "shape": [
+      1142,
+      18
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/fingertip_origin_distance": {
+    "shape": [
+      1142,
+      2
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/fingertip_position_base": {
+    "shape": [
+      1142,
+      12
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/grasp_pose_base": {
+    "shape": [
+      1142,
+      14
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/gripper_close_command": {
+    "shape": [
+      1142,
+      2
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/next_obs/joint_position": {
+    "shape": [
+      1142,
+      26
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/joint_velocity": {
+    "shape": [
+      1142,
+      26
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/overview_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/overview_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/next_obs/overview_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/next_obs/previous_action": {
+    "shape": [
+      1142,
+      18
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/robot_0_head_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/robot_0_head_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/next_obs/robot_0_head_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/next_obs/robot_0_wrist_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/robot_0_wrist_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/next_obs/robot_0_wrist_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/next_obs/robot_1_head_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/robot_1_head_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/next_obs/robot_1_head_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/next_obs/robot_1_wrist_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/next_obs/robot_1_wrist_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/next_obs/robot_1_wrist_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/next_obs/simulation_time_s": {
+    "shape": [
+      1142,
+      1
+    ],
+    "dtype": "float64"
+  },
+  "data/demo_0/obs/base_pose_world": {
+    "shape": [
+      1142,
+      14
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/base_twist_world": {
+    "shape": [
+      1142,
+      12
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/controller_target": {
+    "shape": [
+      1142,
+      18
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/fingertip_origin_distance": {
+    "shape": [
+      1142,
+      2
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/fingertip_position_base": {
+    "shape": [
+      1142,
+      12
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/grasp_pose_base": {
+    "shape": [
+      1142,
+      14
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/gripper_close_command": {
+    "shape": [
+      1142,
+      2
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/obs/joint_position": {
+    "shape": [
+      1142,
+      26
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/joint_velocity": {
+    "shape": [
+      1142,
+      26
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/overview_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/overview_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/obs/overview_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/obs/previous_action": {
+    "shape": [
+      1142,
+      18
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/robot_0_head_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/robot_0_head_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/obs/robot_0_head_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/obs/robot_0_wrist_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/robot_0_wrist_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/obs/robot_0_wrist_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/obs/robot_1_head_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/robot_1_head_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/obs/robot_1_head_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/obs/robot_1_wrist_depth": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/obs/robot_1_wrist_depth_valid": {
+    "shape": [
+      1142,
+      256,
+      256,
+      1
+    ],
+    "dtype": "bool"
+  },
+  "data/demo_0/obs/robot_1_wrist_rgb": {
+    "shape": [
+      1142,
+      256,
+      256,
+      3
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/obs/simulation_time_s": {
+    "shape": [
+      1142,
+      1
+    ],
+    "dtype": "float64"
+  },
+  "data/demo_0/rewards": {
+    "shape": [
+      1142
+    ],
+    "dtype": "float32"
+  },
+  "data/demo_0/terminated": {
+    "shape": [
+      1142
+    ],
+    "dtype": "uint8"
+  },
+  "data/demo_0/truncated": {
+    "shape": [
+      1142
+    ],
+    "dtype": "uint8"
+  }
+}

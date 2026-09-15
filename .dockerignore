@@ -1,0 +1,6 @@
+*
+!Dockerfile
+!requirements-runtime.txt
+!entrypoint.sh
+!sitecustomize/
+!sitecustomize/sitecustomize.py

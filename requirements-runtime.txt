@@ -1,0 +1,5 @@
+termcolor==3.3.0
+scipy==1.17.0
+matplotlib==3.10.8
+gymnasium==1.2.3
+h5py==3.16.0
