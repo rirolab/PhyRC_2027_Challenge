@@ -212,7 +212,7 @@ Replace the policy and checkpoint paths with your own files.
 Local scores on the public practice seeds are not final scores. For submission, prepare your code, checkpoint, dependencies, data sources, and run instructions so the results can be reproduced.
 Schedules, final seeds, where to submit, and time limits will be announced by the organizers on the [challenge website](https://emprise.cs.cornell.edu/phyrc/challenge-2027/).
 
-## 7. Scoring and points/s
+## 7. Scoring and ranking
 
 ```bash
 # Score from the start with no button press; ESC ends and saves the result
@@ -240,6 +240,14 @@ points/s = (total points − pickup points actually earned)
 
 Time is measured in simulation ticks. The numerator excludes pickup, so its maximum is 45, and waiting after your last award does not grow the denominator.
 Contact is detected using the collision meshes of the shirt and manikin. Attempts with no contact, or with a zero denominator, count as 0 when averaging over episodes.
+
+**Ranking: points first, then speed.**
+
+```text
+ranking score = raw points + points/s / (1 + points/s)
+```
+
+Raw points include pickup and are averaged over the evaluation seeds. The speed bonus is always below 1 and every award is a multiple of 5 points, so more points always rank higher; points/s only orders teams with the same points.
 The [evaluation guide](docs/competition/EVALUATION.md) covers failure handling, success criteria, result fields, and replay scoring.
 
 ## 8. Allowed information and fair play

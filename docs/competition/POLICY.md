@@ -137,7 +137,7 @@ USER isaac-sim
 - Put all weights in the zip. Nothing is downloaded during evaluation.
 
 Each submission runs on one RTX 3090 (24 GB). The simulator uses about 10 GB of GPU memory, so keep your policy within 12 GB.
-The final evaluation runs every team's last submission on the same three hidden seeds. Leaderboard checkpoints on Nov 17, Dec 1, Dec 4, Dec 8 and Dec 12 (23:59 AoE) score each team's latest submission on one hidden seed; they show progress and do not count toward the ranking.
+The final evaluation runs every team's last submission on the same three hidden seeds and ranks by ranking score (raw points first, then points/s; see the [evaluation guide](EVALUATION.md#ranking)). Leaderboard checkpoints on Nov 17, Dec 1, Dec 4, Dec 8 and Dec 12 (23:59 AoE) score each team's latest submission on one hidden seed; they show progress and do not count toward the ranking.
 The episode limit is 900 s, counting simulation time plus your policy's inference time. A submission whose image fails to build, or whose run crashes or produces no valid score, scores 0.
 
 Before submitting, unzip your submission into `participant/` in a fresh clone and run the same command we run.
