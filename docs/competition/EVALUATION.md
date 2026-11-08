@@ -59,15 +59,6 @@ Points, once earned, are kept even if the state changes later.
 **Dressing success** means both hands are out of different sleeves, the head/neck is out, and the front/back orientation is correct, all confirmed together for 0.5 s.
 50 points and a successful demonstration are not the same thing, so check `success` in the results separately.
 
-## Ranking
-
-```text
-ranking_score = mean raw_points + r / (1 + r)        r = final_score (points/s, mean over seeds)
-```
-
-Teams are ranked by `ranking_score`: **more points first, then speed.** Raw points include pickup. Every award is a multiple of 5 points, so the mean raw points of two submissions over the same seeds are either equal or differ by at least 5 / number of seeds, while the speed bonus `r / (1 + r)` is always below 1. A faster rate therefore only breaks ties between equal points; a partial dressing can never outrank a fuller one, and picking up the shirt ranks above earning nothing.
-For example, 50 raw points at 2.16 points/s gives 50 + 2.16 / 3.16 = 50.684.
-
 ## points/s and failures
 
 ```text
@@ -102,7 +93,6 @@ Awards are checked on 20 Hz evaluation samples. Time spent after contact is lost
 | result.elapsed_episode_time_s | Total episode time including warm-up |
 | result.contact_elapsed_time_s | Total time from contact until now or the end |
 | result.final_score | points/s, or null |
-| ranking_score | Per submission in the multi-seed summary: mean raw points + speed bonus (see Ranking) |
 | result.score_status | scored / no_contact / no_dressing_points / awaiting_elapsed_time |
 | result.success | Whether the dressing success condition was reached |
 

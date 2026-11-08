@@ -149,7 +149,6 @@ In `--training-record 1`, `1` turns training recording on and `0` turns it off.
 | raw_points | Cumulative total including pickup, max 50 |
 | rate_points | The points/s numerator excluding pickup, max 45 |
 | points/s | Points excluding pickup, divided by the time from first contact to the last dressing award |
-| ranking score | Raw points plus a speed bonus points/s ÷ (1 + points/s); more points rank first, speed breaks ties |
 | success | Whether the evaluator's dressing success condition was reached |
 
 **ESC ends teleop; READY means the files are finished.** After ESC, keep the terminal open until READY.

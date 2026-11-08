@@ -505,12 +505,7 @@ def evaluate_submissions(data, config=None):
                         'success_count': sum(e['success'] for e in known),
                         'success_rate': fmean(e['success'] for e in known) if len(known) == len(scores) else None,
                         'mean_raw_points': fmean(e['raw_points'] for e in scores)})
-        # Ranking: points first, then speed. Every award is a multiple of 5 points, so mean raw points over any seed
-        # set differ by at least 5/n_seeds or not at all; the speed bonus rate/(1+rate) lies in [0, 1) and only orders
-        # submissions with equal points.
-        rate = results[-1]['final_score']
-        results[-1]['ranking_score'] = results[-1]['mean_raw_points'] + rate / (1.0 + rate)
-    best = max(results, key=lambda result: result['ranking_score'])
+    best = max(results, key=lambda result: result['final_score'])
     contact_timing = data['schema_version'] in ('phase1-measurements-v3', 'phase1-measurements-v4', 'phase1-measurements-v5', 'phase1-measurements-v6', 'phase1-measurements-v7')
     rate_mode = data['schema_version'] == 'phase1-measurements-v7'
     neck_mode = data['schema_version'] in ('phase1-measurements-v6', 'phase1-measurements-v7')
@@ -522,7 +517,6 @@ def evaluate_submissions(data, config=None):
             'scoring_revision': RATE_RULE if rate_mode else 'instant-neck-overall-v8' if neck_mode else ('sleeve-cover-hand-exit-v7' if sleeve_mode else ('upper-arm-neck-front-v6' if quality_mode else 'separate-dressing-items-v5')),
             'timing_basis': 'first_garment_mannequin_contact' if contact_timing else 'episode_start_legacy',
             'aggregation': 'arithmetic mean of episode ranking_score; all seeds included',
-            'ranking': 'ranking_score = mean raw points + r/(1+r), r = final_score (points/s): more points first, speed breaks ties',
             'undefined_rate_policy': 'no_contact or zero post-contact duration contributes 0; measured final_score remains null',
             'config': asdict(config), 'submissions': results,
             'best_submission_id': best['submission_id'],
