@@ -1,0 +1,68 @@
+{
+  "/World/Stretch4": {
+    "prim_path": "/World/Stretch4",
+    "dof_names": [
+      "wheel_0_joint",
+      "wheel_1_joint",
+      "wheel_2_joint",
+      "lift_joint",
+      "arm_l1_joint",
+      "arm_l2_joint",
+      "arm_l3_joint",
+      "arm_l4_joint",
+      "wrist_yaw_joint",
+      "wrist_pitch_joint",
+      "wrist_roll_joint",
+      "gripper_finger_left_joint",
+      "gripper_finger_right_joint"
+    ],
+    "dof_indices": {
+      "wheel_0_joint": 0,
+      "wheel_1_joint": 1,
+      "wheel_2_joint": 2,
+      "lift_joint": 3,
+      "arm_l1_joint": 4,
+      "arm_l2_joint": 5,
+      "arm_l3_joint": 6,
+      "arm_l4_joint": 7,
+      "wrist_yaw_joint": 8,
+      "wrist_pitch_joint": 9,
+      "wrist_roll_joint": 10,
+      "gripper_finger_left_joint": 11,
+      "gripper_finger_right_joint": 12
+    }
+  },
+  "/World/Stretch4_2": {
+    "prim_path": "/World/Stretch4_2",
+    "dof_names": [
+      "wheel_0_joint",
+      "wheel_1_joint",
+      "wheel_2_joint",
+      "lift_joint",
+      "arm_l1_joint",
+      "arm_l2_joint",
+      "arm_l3_joint",
+      "arm_l4_joint",
+      "wrist_yaw_joint",
+      "wrist_pitch_joint",
+      "wrist_roll_joint",
+      "gripper_finger_left_joint",
+      "gripper_finger_right_joint"
+    ],
+    "dof_indices": {
+      "wheel_0_joint": 0,
+      "wheel_1_joint": 1,
+      "wheel_2_joint": 2,
+      "lift_joint": 3,
+      "arm_l1_joint": 4,
+      "arm_l2_joint": 5,
+      "arm_l3_joint": 6,
+      "arm_l4_joint": 7,
+      "wrist_yaw_joint": 8,
+      "wrist_pitch_joint": 9,
+      "wrist_roll_joint": 10,
+      "gripper_finger_left_joint": 11,
+      "gripper_finger_right_joint": 12
+    }
+  }
+}

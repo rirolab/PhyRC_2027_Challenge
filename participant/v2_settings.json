@@ -1,0 +1,14 @@
+{
+  "execution_mode": "plan_only",
+  "sim_experiment_ack": false,
+  "map_out": "/output/v2_sdl",
+  "map_stride": 12,
+  "plan_stride": 120,
+  "rrt_iterations": 60,
+  "astar_expansions": 650,
+  "strategy_library": null,
+  "diagnostic_scene_side": null,
+  "diagnostic_ack": false,
+  "video_enabled": true,
+  "video_stride": 4
+}

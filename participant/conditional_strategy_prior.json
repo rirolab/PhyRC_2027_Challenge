@@ -1,0 +1,26 @@
+{
+  "schema": "phyrc_v2_conditional_strategy_prior_v1",
+  "status": "REVIEW_PRIOR_NOT_VERIFIED_ONLINE",
+  "applies_only_to": "POST_GRASP_PAIR_CONFIGURATION_AND_SCENE_SIDE_WITH_PROVENANCE",
+  "rules": {
+    "LEFT": {
+      "strategy_id": "LEFT_R0_YIELD_R1_PASS_CW_REVIEW",
+      "yielding_robot": 0,
+      "passing_robot": 1,
+      "turn_preference": "CW",
+      "provenance": "USER_SPECIFIED_LEFT_SCENE_AND_PARTIAL_20261106_REPLAY",
+      "verification": "CONDITIONAL_ROLE_HYPOTHESIS_NOT_FULL_BODY_VERIFIED"
+    },
+    "RIGHT": {
+      "strategy_id": "RIGHT_R1_YIELD_R0_PASS_MIRROR_REVIEW",
+      "yielding_robot": 1,
+      "passing_robot": 0,
+      "turn_preference": "UNVERIFIED_MIRROR",
+      "provenance": "USER_SPECIFIED_MIRRORED_RIGHT_SCENE_RULE",
+      "verification": "CONDITIONAL_ROLE_HYPOTHESIS_NOT_FULL_BODY_VERIFIED"
+    }
+  },
+  "requires_scene_side_estimator": true,
+  "manual_hint_plan_only_only": true,
+  "motion_authorized": false
+}

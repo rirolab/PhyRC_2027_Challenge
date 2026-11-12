@@ -1,0 +1,331 @@
+USD: /home/nguyenchianh7777/PhyRC_2027_Challenge/assets/custom/robots/stretch_4/stretch_4.usd
+Up axis: Z
+Meters per unit: 1.0
+
+=== PRIM TYPES ===
+: 4
+Cube: 6
+Material: 6
+Mesh: 112
+PhysicsCollisionGroup: 2
+PhysicsFixedJoint: 39
+PhysicsPrismaticJoint: 5
+PhysicsRevoluteJoint: 8
+RenderProduct: 1
+RenderSettings: 1
+RenderVar: 1
+Scope: 5
+Shader: 6
+Xform: 384
+
+=== COLLISION SHAPES ===
+Mesh         enabled=True /colliders/base_link/base_collision_link/mesh
+Mesh         enabled=True /colliders/head_link/head_collision_link/mesh
+Mesh         enabled=True /colliders/mast_link/mast_collision_link/mesh
+Mesh         enabled=True /colliders/lift_link/lift_collision_link/mesh
+Mesh         enabled=True /colliders/arm_l0_link/arm_l0_collision_link/mesh
+Mesh         enabled=True /colliders/arm_l1_link/arm_l1_collision_link/mesh
+Mesh         enabled=True /colliders/arm_l2_link/arm_l2_collision_link/mesh
+Mesh         enabled=True /colliders/arm_l3_link/arm_l3_collision_link/mesh
+Mesh         enabled=True /colliders/arm_l4_link/arm_l4_collision_link/mesh
+Mesh         enabled=True /colliders/wrist_link/wrist_collision_link/mesh
+Mesh         enabled=True /colliders/wrist_aruco_link/wrist_aruco_collision_link/mesh
+Mesh         enabled=True /colliders/wrist_reflector_link/wrist_reflector_collision_link/mesh
+Mesh         enabled=True /colliders/wrist_yaw_link/wrist_yaw_collision_link/mesh
+Mesh         enabled=True /colliders/wrist_pitch_link/wrist_pitch_collision_link/mesh
+Mesh         enabled=True /colliders/wrist_roll_link/wrist_roll_collision_link/mesh
+Mesh         enabled=True /colliders/gripper_camera_link/gripper_camera_link_collision/mesh
+Mesh         enabled=True /colliders/tool_attachment_site_link/tool_attachment_site_collision_link/mesh
+Mesh         enabled=True /colliders/quick_connect_interface_link/quick_connect_interface_collision_link/mesh
+Mesh         enabled=True /colliders/grasp_center_link/grasp_center_collision_link/mesh
+Mesh         enabled=True /colliders/gripper_finger_left_link/gripper_finger_left_collision_link/mesh
+Mesh         enabled=True /colliders/gripper_fingertip_left_link/gripper_fingertip_left_collision_link/mesh
+Mesh         enabled=True /colliders/aruco_fingertip_left_link/aruco_fingertip_left_collision_link/mesh
+Mesh         enabled=True /colliders/gripper_finger_right_link/gripper_finger_right_collision_link/mesh
+Mesh         enabled=True /colliders/gripper_fingertip_right_link/gripper_fingertip_right_collision_link/mesh
+Mesh         enabled=True /colliders/aruco_fingertip_right_link/aruco_fingertip_right_collision_link/mesh
+Mesh         enabled=True /colliders/wheel_0_link/wheel_0_collision_link/mesh
+Mesh         enabled=True /colliders/wheel_1_link/wheel_1_collision_link/mesh
+Mesh         enabled=True /colliders/wheel_2_link/wheel_2_collision_link/mesh
+
+=== JOINTS ===
+PhysicsFixedJoint /stretch/joints/base_ref
+PhysicsFixedJoint /stretch/joints/head_joint
+PhysicsFixedJoint /stretch/joints/camera_center_joint
+PhysicsFixedJoint /stretch/joints/camera_center_optical_joint
+PhysicsFixedJoint /stretch/joints/camera_left_joint
+PhysicsFixedJoint /stretch/joints/camera_left_optical_joint
+PhysicsFixedJoint /stretch/joints/camera_right_joint
+PhysicsFixedJoint /stretch/joints/camera_right_optical_joint
+PhysicsFixedJoint /stretch/joints/lidar_left_joint
+PhysicsFixedJoint /stretch/joints/lidar_right_joint
+PhysicsFixedJoint /stretch/joints/laser_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_0_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_0_optical_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_1_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_1_optical_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_2_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_2_optical_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_3_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_3_optical_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_4_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_4_optical_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_5_joint
+PhysicsFixedJoint /stretch/joints/line_sensor_5_optical_joint
+PhysicsFixedJoint /stretch/joints/mast_joint
+PhysicsPrismaticJoint /stretch/joints/lift_joint
+PhysicsFixedJoint /stretch/joints/arm_l0_joint
+PhysicsPrismaticJoint /stretch/joints/arm_l1_joint
+PhysicsPrismaticJoint /stretch/joints/arm_l2_joint
+PhysicsPrismaticJoint /stretch/joints/arm_l3_joint
+PhysicsPrismaticJoint /stretch/joints/arm_l4_joint
+PhysicsFixedJoint /stretch/joints/wrist_joint
+PhysicsFixedJoint /stretch/joints/wrist_aruco_joint
+PhysicsFixedJoint /stretch/joints/wrist_reflector_joint
+PhysicsRevoluteJoint /stretch/joints/wrist_yaw_joint
+PhysicsRevoluteJoint /stretch/joints/wrist_pitch_joint
+PhysicsRevoluteJoint /stretch/joints/wrist_roll_joint
+PhysicsFixedJoint /stretch/joints/gripper_camera_joint
+PhysicsFixedJoint /stretch/joints/gripper_left_camera_color_optical_joint
+PhysicsFixedJoint /stretch/joints/gripper_right_camera_color_optical_joint
+PhysicsFixedJoint /stretch/joints/gripper_stereo_camera_color_optical_joint
+PhysicsFixedJoint /stretch/joints/tool_attachment_site_joint
+PhysicsFixedJoint /stretch/joints/tool_connection_joint
+PhysicsFixedJoint /stretch/joints/grasp_center_joint
+PhysicsRevoluteJoint /stretch/joints/gripper_finger_left_joint
+PhysicsFixedJoint /stretch/joints/gripper_fingertip_left_joint
+PhysicsFixedJoint /stretch/joints/aruco_fingertip_left_joint
+PhysicsRevoluteJoint /stretch/joints/gripper_finger_right_joint
+PhysicsFixedJoint /stretch/joints/gripper_fingertip_right_joint
+PhysicsFixedJoint /stretch/joints/aruco_fingertip_right_joint
+PhysicsRevoluteJoint /stretch/joints/wheel_0_joint
+PhysicsRevoluteJoint /stretch/joints/wheel_1_joint
+PhysicsRevoluteJoint /stretch/joints/wheel_2_joint
+
+=== REFERENCES ===
+/stretch/base_footprint/visuals
+/stretch/base_link/visuals
+/stretch/base_link/collisions
+/stretch/head_link/visuals
+/stretch/head_link/collisions
+/stretch/camera_center_link/visuals
+/stretch/camera_center_optical_link/visuals
+/stretch/camera_left_link/visuals
+/stretch/camera_left_optical_link/visuals
+/stretch/camera_right_link/visuals
+/stretch/camera_right_optical_link/visuals
+/stretch/lidar_left_link/visuals
+/stretch/lidar_right_link/visuals
+/stretch/laser/visuals
+/stretch/line_sensor_0_link/visuals
+/stretch/line_sensor_0_optical_link/visuals
+/stretch/line_sensor_1_link/visuals
+/stretch/line_sensor_1_optical_link/visuals
+/stretch/line_sensor_2_link/visuals
+/stretch/line_sensor_2_optical_link/visuals
+/stretch/line_sensor_3_link/visuals
+/stretch/line_sensor_3_optical_link/visuals
+/stretch/line_sensor_4_link/visuals
+/stretch/line_sensor_4_optical_link/visuals
+/stretch/line_sensor_5_link/visuals
+/stretch/line_sensor_5_optical_link/visuals
+/stretch/mast_link/visuals
+/stretch/mast_link/collisions
+/stretch/lift_link/visuals
+/stretch/lift_link/collisions
+/stretch/arm_l0_link/visuals
+/stretch/arm_l0_link/collisions
+/stretch/arm_l1_link/visuals
+/stretch/arm_l1_link/collisions
+/stretch/arm_l2_link/visuals
+/stretch/arm_l2_link/collisions
+/stretch/arm_l3_link/visuals
+/stretch/arm_l3_link/collisions
+/stretch/arm_l4_link/visuals
+/stretch/arm_l4_link/collisions
+/stretch/wrist_link/visuals
+/stretch/wrist_link/collisions
+/stretch/wrist_aruco_link/visuals
+/stretch/wrist_aruco_link/collisions
+/stretch/wrist_reflector_link/visuals
+/stretch/wrist_reflector_link/collisions
+/stretch/wrist_yaw_link/visuals
+/stretch/wrist_yaw_link/collisions
+/stretch/wrist_pitch_link/visuals
+/stretch/wrist_pitch_link/collisions
+/stretch/wrist_roll_link/visuals
+/stretch/wrist_roll_link/collisions
+/stretch/gripper_camera_link/visuals
+/stretch/gripper_camera_link/collisions
+/stretch/gripper_left_camera_color_optical_frame/visuals
+/stretch/gripper_right_camera_color_optical_frame/visuals
+/stretch/gripper_stereo_camera_color_optical_frame/visuals
+/stretch/tool_attachment_site_link/visuals
+/stretch/tool_attachment_site_link/collisions
+/stretch/quick_connect_interface_link/visuals
+/stretch/quick_connect_interface_link/collisions
+/stretch/grasp_center_link/visuals
+/stretch/grasp_center_link/collisions
+/stretch/gripper_finger_left_link/visuals
+/stretch/gripper_finger_left_link/collisions
+/stretch/gripper_fingertip_left_link/visuals
+/stretch/gripper_fingertip_left_link/collisions
+/stretch/aruco_fingertip_left_link/visuals
+/stretch/aruco_fingertip_left_link/collisions
+/stretch/gripper_finger_right_link/visuals
+/stretch/gripper_finger_right_link/collisions
+/stretch/gripper_fingertip_right_link/visuals
+/stretch/gripper_fingertip_right_link/collisions
+/stretch/aruco_fingertip_right_link/visuals
+/stretch/aruco_fingertip_right_link/collisions
+/stretch/wheel_0_link/visuals
+/stretch/wheel_0_link/collisions
+/stretch/wheel_1_link/visuals
+/stretch/wheel_1_link/collisions
+/stretch/wheel_2_link/visuals
+/stretch/wheel_2_link/collisions
+/visuals/base_link/base_link
+/visuals/head_link/head_link
+/visuals/mast_link/mast_link
+/visuals/lift_link/lift_link
+/visuals/arm_l0_link/arm_l4_link
+/visuals/arm_l1_link/arm_l3_link
+/visuals/arm_l2_link/arm_l2_link
+/visuals/arm_l3_link/arm_l1_link
+/visuals/arm_l4_link/arm_l0_link
+/visuals/wrist_link/wrist_link
+/visuals/wrist_aruco_link/wrist_aruco_link
+/visuals/wrist_reflector_link/wrist_reflector_link
+/visuals/wrist_yaw_link/wrist_yaw_link
+/visuals/wrist_pitch_link/wrist_pitch_link
+/visuals/wrist_roll_link/wrist_roll_link
+/visuals/gripper_camera_link/gripper_camera_link
+/visuals/tool_attachment_site_link/tool_attachment_site_link
+/visuals/quick_connect_interface_link/quick_connect_interface_link
+/visuals/grasp_center_link/grasp_center_link
+/visuals/gripper_finger_left_link/gripper_finger_left_link
+/visuals/gripper_fingertip_left_link/gripper_fingertip_left_link
+/visuals/aruco_fingertip_left_link/aruco_fingertip_left_link
+/visuals/gripper_finger_right_link/gripper_finger_right_link
+/visuals/gripper_fingertip_right_link/gripper_fingertip_right_link
+/visuals/aruco_fingertip_right_link/aruco_fingertip_right_link
+/visuals/wheel_0_link/wheel_0_link
+/visuals/wheel_1_link/wheel_1_link
+/visuals/wheel_2_link/wheel_2_link
+/colliders/base_link/base_collision_link
+/colliders/head_link/head_collision_link
+/colliders/mast_link/mast_collision_link
+/colliders/lift_link/lift_collision_link
+/colliders/arm_l0_link/arm_l0_collision_link
+/colliders/arm_l1_link/arm_l1_collision_link
+/colliders/arm_l2_link/arm_l2_collision_link
+/colliders/arm_l3_link/arm_l3_collision_link
+/colliders/arm_l4_link/arm_l4_collision_link
+/colliders/wrist_link/wrist_collision_link
+/colliders/wrist_aruco_link/wrist_aruco_collision_link
+/colliders/wrist_reflector_link/wrist_reflector_collision_link
+/colliders/wrist_yaw_link/wrist_yaw_collision_link
+/colliders/wrist_pitch_link/wrist_pitch_collision_link
+/colliders/wrist_roll_link/wrist_roll_collision_link
+/colliders/gripper_camera_link/gripper_camera_link_collision
+/colliders/tool_attachment_site_link/tool_attachment_site_collision_link
+/colliders/quick_connect_interface_link/quick_connect_interface_collision_link
+/colliders/grasp_center_link/grasp_center_collision_link
+/colliders/gripper_finger_left_link/gripper_finger_left_collision_link
+/colliders/gripper_fingertip_left_link/gripper_fingertip_left_collision_link
+/colliders/aruco_fingertip_left_link/aruco_fingertip_left_collision_link
+/colliders/gripper_finger_right_link/gripper_finger_right_collision_link
+/colliders/gripper_fingertip_right_link/gripper_fingertip_right_collision_link
+/colliders/aruco_fingertip_right_link/aruco_fingertip_right_collision_link
+/colliders/wheel_0_link/wheel_0_collision_link
+/colliders/wheel_1_link/wheel_1_collision_link
+/colliders/wheel_2_link/wheel_2_collision_link
+
+=== INSTANCE ROOTS ===
+/stretch/base_footprint/visuals
+/stretch/base_link/visuals
+/stretch/base_link/collisions
+/stretch/head_link/visuals
+/stretch/head_link/collisions
+/stretch/camera_center_link/visuals
+/stretch/camera_center_optical_link/visuals
+/stretch/camera_left_link/visuals
+/stretch/camera_left_optical_link/visuals
+/stretch/camera_right_link/visuals
+/stretch/camera_right_optical_link/visuals
+/stretch/lidar_left_link/visuals
+/stretch/lidar_right_link/visuals
+/stretch/laser/visuals
+/stretch/line_sensor_0_link/visuals
+/stretch/line_sensor_0_optical_link/visuals
+/stretch/line_sensor_1_link/visuals
+/stretch/line_sensor_1_optical_link/visuals
+/stretch/line_sensor_2_link/visuals
+/stretch/line_sensor_2_optical_link/visuals
+/stretch/line_sensor_3_link/visuals
+/stretch/line_sensor_3_optical_link/visuals
+/stretch/line_sensor_4_link/visuals
+/stretch/line_sensor_4_optical_link/visuals
+/stretch/line_sensor_5_link/visuals
+/stretch/line_sensor_5_optical_link/visuals
+/stretch/mast_link/visuals
+/stretch/mast_link/collisions
+/stretch/lift_link/visuals
+/stretch/lift_link/collisions
+/stretch/arm_l0_link/visuals
+/stretch/arm_l0_link/collisions
+/stretch/arm_l1_link/visuals
+/stretch/arm_l1_link/collisions
+/stretch/arm_l2_link/visuals
+/stretch/arm_l2_link/collisions
+/stretch/arm_l3_link/visuals
+/stretch/arm_l3_link/collisions
+/stretch/arm_l4_link/visuals
+/stretch/arm_l4_link/collisions
+/stretch/wrist_link/visuals
+/stretch/wrist_link/collisions
+/stretch/wrist_aruco_link/visuals
+/stretch/wrist_aruco_link/collisions
+/stretch/wrist_reflector_link/visuals
+/stretch/wrist_reflector_link/collisions
+/stretch/wrist_yaw_link/visuals
+/stretch/wrist_yaw_link/collisions
+/stretch/wrist_pitch_link/visuals
+/stretch/wrist_pitch_link/collisions
+/stretch/wrist_roll_link/visuals
+/stretch/wrist_roll_link/collisions
+/stretch/gripper_camera_link/visuals
+/stretch/gripper_camera_link/collisions
+/stretch/gripper_left_camera_color_optical_frame/visuals
+/stretch/gripper_right_camera_color_optical_frame/visuals
+/stretch/gripper_stereo_camera_color_optical_frame/visuals
+/stretch/tool_attachment_site_link/visuals
+/stretch/tool_attachment_site_link/collisions
+/stretch/quick_connect_interface_link/visuals
+/stretch/quick_connect_interface_link/collisions
+/stretch/grasp_center_link/visuals
+/stretch/grasp_center_link/collisions
+/stretch/gripper_finger_left_link/visuals
+/stretch/gripper_finger_left_link/collisions
+/stretch/gripper_fingertip_left_link/visuals
+/stretch/gripper_fingertip_left_link/collisions
+/stretch/aruco_fingertip_left_link/visuals
+/stretch/aruco_fingertip_left_link/collisions
+/stretch/gripper_finger_right_link/visuals
+/stretch/gripper_finger_right_link/collisions
+/stretch/gripper_fingertip_right_link/visuals
+/stretch/gripper_fingertip_right_link/collisions
+/stretch/aruco_fingertip_right_link/visuals
+/stretch/aruco_fingertip_right_link/collisions
+/stretch/wheel_0_link/visuals
+/stretch/wheel_0_link/collisions
+/stretch/wheel_1_link/visuals
+/stretch/wheel_1_link/collisions
+/stretch/wheel_2_link/visuals
+/stretch/wheel_2_link/collisions
+
+=== SUMMARY ===
+Collision prims: 28
+Enabled collision prims: 28
+Joint prims: 52
+Instance roots: 81

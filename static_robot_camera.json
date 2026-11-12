@@ -1,0 +1,1763 @@
+{
+  "schema": "phyrc-static-robot-camera-v1",
+  "joints": [
+    {
+      "name": "base_ref",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_footprint",
+      "child": "base_link",
+      "p0": [
+        0.0,
+        0.0,
+        0.02800000086426735
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "head_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "head_link",
+      "p0": [
+        -0.09300000220537186,
+        -0.09799999743700027,
+        1.559000015258789
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "camera_center_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "head_link",
+      "child": "camera_center_link",
+      "p0": [
+        0.17724600434303284,
+        0.09799999743700027,
+        -0.023906899616122246
+      ],
+      "q0": [
+        5.853084985574242e-07,
+        -0.8870108127593994,
+        1.1243668041061028e-06,
+        -0.46174874901771545
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "camera_center_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "camera_center_link",
+      "child": "camera_center_optical_link",
+      "p0": [
+        0.0017000000225380063,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "camera_left_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "head_link",
+      "child": "camera_left_link",
+      "p0": [
+        0.17184099555015564,
+        0.17299999296665192,
+        -0.015756700187921524
+      ],
+      "q0": [
+        4.645734179575811e-07,
+        0.9304176568984985,
+        1.1793888461397728e-06,
+        0.366501122713089
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "camera_left_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "camera_left_link",
+      "child": "camera_left_optical_link",
+      "p0": [
+        0.021199999377131462,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "camera_right_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "head_link",
+      "child": "camera_right_link",
+      "p0": [
+        0.17184099555015564,
+        0.023000000044703484,
+        -0.015756700187921524
+      ],
+      "q0": [
+        0.366501122713089,
+        0.0,
+        0.9304176568984985,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "camera_right_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "camera_right_link",
+      "child": "camera_right_optical_link",
+      "p0": [
+        0.021199999377131462,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "lidar_left_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "head_link",
+      "child": "lidar_left_link",
+      "p0": [
+        0.13174399733543396,
+        0.22241400182247162,
+        -0.05832799896597862
+      ],
+      "q0": [
+        0.3749469816684723,
+        -0.3635298013687134,
+        -0.12505245208740234,
+        -0.8435773849487305
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "lidar_right_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "head_link",
+      "child": "lidar_right_link",
+      "p0": [
+        0.13174399733543396,
+        -0.026413699612021446,
+        -0.05832799896597862
+      ],
+      "q0": [
+        0.3635297417640686,
+        -0.37494683265686035,
+        -0.8435774445533752,
+        -0.12505239248275757
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "laser_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "laser",
+      "p0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_0_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "line_sensor_0_link",
+      "p0": [
+        0.18512000143527985,
+        -0.035999998450279236,
+        0.052701398730278015
+      ],
+      "q0": [
+        0.37470871210098267,
+        0.5996617078781128,
+        0.5996595621109009,
+        0.3747100830078125
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_0_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "line_sensor_0_link",
+      "child": "line_sensor_0_optical_link",
+      "p0": [
+        0.002859999891370535,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_1_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "line_sensor_1_link",
+      "p0": [
+        0.12373699992895126,
+        -0.142318993806839,
+        0.052701398730278015
+      ],
+      "q0": [
+        0.5118625164031982,
+        0.819152295589447,
+        0.21948857605457306,
+        0.13715344667434692
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_1_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "line_sensor_1_link",
+      "child": "line_sensor_1_optical_link",
+      "p0": [
+        0.002859999891370535,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_2_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "line_sensor_2_link",
+      "p0": [
+        -0.12373699992895126,
+        -0.142318993806839,
+        0.052701398730278015
+      ],
+      "q0": [
+        0.5118625164031982,
+        0.8191507458686829,
+        -0.21949449181556702,
+        -0.13715344667434692
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_2_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "line_sensor_2_link",
+      "child": "line_sensor_2_optical_link",
+      "p0": [
+        0.002859999891370535,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_3_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "line_sensor_3_link",
+      "p0": [
+        -0.18512000143527985,
+        -0.035999998450279236,
+        0.052701398730278015
+      ],
+      "q0": [
+        0.3747105598449707,
+        0.5996602773666382,
+        -0.5996609926223755,
+        -0.37470823526382446
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_3_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "line_sensor_3_link",
+      "child": "line_sensor_3_optical_link",
+      "p0": [
+        0.002859999891370535,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_4_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "line_sensor_4_link",
+      "p0": [
+        -0.0613831989467144,
+        0.17831900715827942,
+        0.052701398730278015
+      ],
+      "q0": [
+        -0.13715529441833496,
+        -0.21949152648448944,
+        0.8191515207290649,
+        0.5118619799613953
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_4_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "line_sensor_4_link",
+      "child": "line_sensor_4_optical_link",
+      "p0": [
+        0.002859999891370535,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_5_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "line_sensor_5_link",
+      "p0": [
+        0.0613831989467144,
+        0.17831900715827942,
+        0.052701398730278015
+      ],
+      "q0": [
+        0.13715162873268127,
+        0.21949154138565063,
+        0.8191515207290649,
+        0.5118629932403564
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "line_sensor_5_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "line_sensor_5_link",
+      "child": "line_sensor_5_optical_link",
+      "p0": [
+        0.002859999891370535,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        -2.562999725341797e-06,
+        0.0,
+        0.7071068286895752,
+        -0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "mast_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "base_link",
+      "child": "mast_link",
+      "p0": [
+        -0.09300000220537186,
+        -0.09799999743700027,
+        0.004000000189989805
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "lift_joint",
+      "kind": "PhysicsPrismaticJoint",
+      "parent": "mast_link",
+      "child": "lift_link",
+      "p0": [
+        0.0,
+        -0.00139999995008111,
+        0.2409999966621399
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Z"
+    },
+    {
+      "name": "arm_l0_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "lift_link",
+      "child": "arm_l0_link",
+      "p0": [
+        -0.029500000178813934,
+        0.09939999878406525,
+        -0.012859500013291836
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "arm_l1_joint",
+      "kind": "PhysicsPrismaticJoint",
+      "parent": "arm_l0_link",
+      "child": "arm_l1_link",
+      "p0": [
+        0.005499999970197678,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "X"
+    },
+    {
+      "name": "arm_l2_joint",
+      "kind": "PhysicsPrismaticJoint",
+      "parent": "arm_l1_link",
+      "child": "arm_l2_link",
+      "p0": [
+        0.013500000350177288,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "X"
+    },
+    {
+      "name": "arm_l3_joint",
+      "kind": "PhysicsPrismaticJoint",
+      "parent": "arm_l2_link",
+      "child": "arm_l3_link",
+      "p0": [
+        0.013500000350177288,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "X"
+    },
+    {
+      "name": "arm_l4_joint",
+      "kind": "PhysicsPrismaticJoint",
+      "parent": "arm_l3_link",
+      "child": "arm_l4_link",
+      "p0": [
+        0.013749999925494194,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "X"
+    },
+    {
+      "name": "wrist_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "arm_l4_link",
+      "child": "wrist_link",
+      "p0": [
+        0.2471500039100647,
+        0.0,
+        -0.036720000207424164
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "wrist_aruco_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "wrist_link",
+      "child": "wrist_aruco_link",
+      "p0": [
+        -0.008670000359416008,
+        0.0,
+        0.068060502409935
+      ],
+      "q0": [
+        -0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        1.7926441842064378e-06
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "wrist_reflector_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "wrist_link",
+      "child": "wrist_reflector_link",
+      "p0": [
+        0.006649999879300594,
+        0.0,
+        0.06776049733161926
+      ],
+      "q0": [
+        -0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        1.7926441842064378e-06
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "wrist_yaw_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "wrist_link",
+      "child": "wrist_yaw_link",
+      "p0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Z"
+    },
+    {
+      "name": "wrist_pitch_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "wrist_yaw_link",
+      "child": "wrist_pitch_link",
+      "p0": [
+        0.0,
+        -0.04222000017762184,
+        -0.04520000144839287
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Y"
+    },
+    {
+      "name": "wrist_roll_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "wrist_pitch_link",
+      "child": "wrist_roll_link",
+      "p0": [
+        0.04222000017762184,
+        -0.04520000144839287,
+        0.0
+      ],
+      "q0": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "X"
+    },
+    {
+      "name": "gripper_camera_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "wrist_roll_link",
+      "child": "gripper_camera_link",
+      "p0": [
+        0.019200000911951065,
+        0.0,
+        0.05700000002980232
+      ],
+      "q0": [
+        0.7071055173873901,
+        -1.3113021850585938e-06,
+        -1.2516975402832031e-06,
+        0.7071080803871155
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "gripper_left_camera_color_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_camera_link",
+      "child": "gripper_left_camera_color_optical_frame",
+      "p0": [
+        0.0,
+        0.0,
+        -0.009999999776482582
+      ],
+      "q0": [
+        8.963220921032189e-07,
+        0.7071067690849304,
+        8.963220921032189e-07,
+        0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "gripper_right_camera_color_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_camera_link",
+      "child": "gripper_right_camera_color_optical_frame",
+      "p0": [
+        0.0,
+        0.0,
+        0.009999999776482582
+      ],
+      "q0": [
+        8.963220921032189e-07,
+        0.7071067690849304,
+        8.963220921032189e-07,
+        0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "gripper_stereo_camera_color_optical_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_camera_link",
+      "child": "gripper_stereo_camera_color_optical_frame",
+      "p0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        8.963220921032189e-07,
+        0.7071067690849304,
+        8.963220921032189e-07,
+        0.7071067690849304
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "tool_attachment_site_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "wrist_roll_link",
+      "child": "tool_attachment_site_link",
+      "p0": [
+        0.01860000006854534,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "tool_connection_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "tool_attachment_site_link",
+      "child": "quick_connect_interface_link",
+      "p0": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q0": [
+        0.49999910593032837,
+        -0.5000008940696716,
+        0.49999910593032837,
+        0.5000008940696716
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "grasp_center_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "quick_connect_interface_link",
+      "child": "grasp_center_link",
+      "p0": [
+        0.0,
+        -0.2345380038022995,
+        0.0
+      ],
+      "q0": [
+        0.49999910593032837,
+        0.5000008940696716,
+        0.49999910593032837,
+        -0.5000008940696716
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "gripper_finger_left_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "quick_connect_interface_link",
+      "child": "gripper_finger_left_link",
+      "p0": [
+        0.022260699421167374,
+        -0.037390898913145065,
+        0.0
+      ],
+      "q0": [
+        8.963205004874908e-07,
+        8.963237405623659e-07,
+        0.7071080803871155,
+        0.7071055173873901
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Y"
+    },
+    {
+      "name": "gripper_fingertip_left_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_finger_left_link",
+      "child": "gripper_fingertip_left_link",
+      "p0": [
+        0.022167999297380447,
+        0.0,
+        -0.19100800156593323
+      ],
+      "q0": [
+        0.49999845027923584,
+        -0.5000015497207642,
+        0.4999997615814209,
+        -0.5000002384185791
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "aruco_fingertip_left_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_fingertip_left_link",
+      "child": "aruco_fingertip_left_link",
+      "p0": [
+        0.006753949914127588,
+        -0.033535800874233246,
+        3.801340062636882e-05
+      ],
+      "q0": [
+        0.3799282908439636,
+        0.25915467739105225,
+        0.6579039692878723,
+        0.5963687896728516
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "gripper_finger_right_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "quick_connect_interface_link",
+      "child": "gripper_finger_right_link",
+      "p0": [
+        -0.022260699421167374,
+        -0.037390898913145065,
+        0.0
+      ],
+      "q0": [
+        -8.963237405623659e-07,
+        8.963205004874908e-07,
+        0.7071055173873901,
+        -0.7071080803871155
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Y"
+    },
+    {
+      "name": "gripper_fingertip_right_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_finger_right_link",
+      "child": "gripper_fingertip_right_link",
+      "p0": [
+        -0.022167999297380447,
+        0.0,
+        -0.19100800156593323
+      ],
+      "q0": [
+        -0.5000008940696716,
+        -0.4999977946281433,
+        0.5000008940696716,
+        0.5000004172325134
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "aruco_fingertip_right_joint",
+      "kind": "PhysicsFixedJoint",
+      "parent": "gripper_fingertip_right_link",
+      "child": "aruco_fingertip_right_link",
+      "p0": [
+        0.006754130125045776,
+        0.03353570029139519,
+        3.808170004049316e-05
+      ],
+      "q0": [
+        -0.2591538429260254,
+        -0.3799273371696472,
+        0.5963691473007202,
+        0.6579045653343201
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        0.7071067690849304,
+        0.0,
+        0.7071067690849304,
+        0.0
+      ],
+      "axis": null
+    },
+    {
+      "name": "wheel_0_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "base_link",
+      "child": "wheel_0_link",
+      "p0": [
+        0.15068799257278442,
+        0.08699999749660492,
+        0.07199999690055847
+      ],
+      "q0": [
+        0.35355129837989807,
+        -0.35355257987976074,
+        -0.6123744249343872,
+        0.6123722195625305
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Z"
+    },
+    {
+      "name": "wheel_1_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "base_link",
+      "child": "wheel_1_link",
+      "p0": [
+        -0.15068799257278442,
+        0.08699999749660492,
+        0.07199999690055847
+      ],
+      "q0": [
+        0.35355129837989807,
+        -0.35355257987976074,
+        0.6123744249343872,
+        -0.6123722195625305
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Z"
+    },
+    {
+      "name": "wheel_2_joint",
+      "kind": "PhysicsRevoluteJoint",
+      "parent": "base_link",
+      "child": "wheel_2_link",
+      "p0": [
+        0.0,
+        -0.17399999499320984,
+        0.07199999690055847
+      ],
+      "q0": [
+        0.7071055173873901,
+        -0.7071080803871155,
+        0.0,
+        0.0
+      ],
+      "p1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "q1": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": "Z"
+    }
+  ],
+  "cameras": [
+    {
+      "id": "robot_0_wrist",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "gripper_camera_link",
+      "optical_extrinsic": "fixed configurable mount-local look-at; returned as matrix in info",
+      "clip_m": [
+        0.03,
+        3.0
+      ],
+      "eye_mount_m": [
+        0,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        -0.075,
+        -0.35,
+        0
+      ],
+      "up_mount": [
+        1,
+        0,
+        0
+      ],
+      "horizontal_fov_deg": 70
+    },
+    {
+      "id": "robot_1_wrist",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "gripper_camera_link",
+      "optical_extrinsic": "fixed configurable mount-local look-at; returned as matrix in info",
+      "clip_m": [
+        0.03,
+        3.0
+      ],
+      "eye_mount_m": [
+        0,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        -0.075,
+        -0.35,
+        0
+      ],
+      "up_mount": [
+        1,
+        0,
+        0
+      ],
+      "horizontal_fov_deg": 70
+    },
+    {
+      "id": "robot_0_head",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "camera_center_link",
+      "optical_extrinsic": "fixed mount-local view; +X forward and -Z image up; model tilt about 35 degrees downward",
+      "clip_m": [
+        0.05,
+        5.0
+      ],
+      "eye_mount_m": [
+        0.0017,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        1.0017,
+        0,
+        0
+      ],
+      "up_mount": [
+        0,
+        0,
+        -1
+      ],
+      "horizontal_fov_deg": 70
+    },
+    {
+      "id": "robot_1_head",
+      "status": "implemented",
+      "resolution_from": "default_dimensions.width,height",
+      "mount_role": "camera_center_link",
+      "optical_extrinsic": "fixed mount-local view; +X forward and -Z image up; model tilt about 35 degrees downward",
+      "clip_m": [
+        0.05,
+        5.0
+      ],
+      "eye_mount_m": [
+        0.0017,
+        0,
+        0
+      ],
+      "target_mount_m": [
+        1.0017,
+        0,
+        0
+      ],
+      "up_mount": [
+        0,
+        0,
+        -1
+      ],
+      "horizontal_fov_deg": 70
+    }
+  ],
+  "joint_names": [
+    "wheel_0_joint",
+    "wheel_1_joint",
+    "wheel_2_joint",
+    "lift_joint",
+    "arm_l1_joint",
+    "arm_l2_joint",
+    "arm_l3_joint",
+    "arm_l4_joint",
+    "wrist_yaw_joint",
+    "wrist_pitch_joint",
+    "wrist_roll_joint",
+    "gripper_finger_left_joint",
+    "gripper_finger_right_joint"
+  ],
+  "joint_limits": {
+    "lift_joint": [
+      0.0,
+      1.2000000476837158
+    ],
+    "arm_l1_joint": [
+      0.0,
+      0.12999999523162842
+    ],
+    "arm_l2_joint": [
+      0.0,
+      0.12999999523162842
+    ],
+    "arm_l3_joint": [
+      0.0,
+      0.12999999523162842
+    ],
+    "arm_l4_joint": [
+      0.0,
+      0.12999999523162842
+    ],
+    "wrist_yaw_joint": [
+      -1.1349999749656927,
+      4.275999675738779
+    ],
+    "wrist_pitch_joint": [
+      -4.275999675738779,
+      1.1349999749656927
+    ],
+    "wrist_roll_joint": [
+      -1.1349999749656927,
+      4.275999675738779
+    ],
+    "gripper_finger_left_joint": [
+      0.0,
+      0.4999999725468887
+    ],
+    "gripper_finger_right_joint": [
+      0.0,
+      0.4999999725468887
+    ]
+  },
+  "runtime_rates": {
+    "BASE_LINEAR_RATE": 0.616,
+    "BASE_ANGULAR_RATE": 2.86,
+    "LIFT_RATE": 1.54,
+    "ARM_RATE": 1.21,
+    "WRIST_RATE": 5.5,
+    "BASE_LINEAR_ACCEL": 1.32,
+    "BASE_ANGULAR_ACCEL": 4.4
+  },
+  "provenance": "Static joint frames/limits from shipped robot asset; camera spec from policy_interface.json; rates from Teleop_TShirt_Stretch4_Env.py. No meshes or dynamic scene state.",
+  "gripper_visual_envelopes": {
+    "schema": 1,
+    "source": "Authored visual meshes ONLY, transformed into link frames; conservative AABBs, not collision shapes.",
+    "asset_sha256": "a7a7be5bc14354caaeb4461c9b733e10d8f18a0d047dec58814904e8317deb37",
+    "padding_m": 0.003,
+    "bodies": [
+      {
+        "link": "gripper_finger_left_link",
+        "min_m": [
+          3.5584701851831824e-10,
+          -0.007000000216066837,
+          -0.1967758983373642
+        ],
+        "max_m": [
+          0.06676837801933289,
+          0.007000000216066837,
+          0.00010950463911285624
+        ]
+      },
+      {
+        "link": "gripper_fingertip_left_link",
+        "min_m": [
+          -0.009582689812920389,
+          -0.04062473440269814,
+          -0.017916671285779846
+        ],
+        "max_m": [
+          0.019295086311177753,
+          0.021300570393433665,
+          0.017916564543735476
+        ]
+      },
+      {
+        "link": "gripper_finger_right_link",
+        "min_m": [
+          -0.06676837801933289,
+          -0.007000000216066837,
+          -0.1967758983373642
+        ],
+        "max_m": [
+          -3.5584701851831824e-10,
+          0.007000000216066837,
+          0.00010950463911285624
+        ]
+      },
+      {
+        "link": "gripper_fingertip_right_link",
+        "min_m": [
+          -0.009582697837868885,
+          -0.02130059527120379,
+          -0.0179166729667256
+        ],
+        "max_m": [
+          0.019295121059280686,
+          0.040624756688222005,
+          0.017916562863019538
+        ]
+      },
+      {
+        "link": "quick_connect_interface_link",
+        "min_m": [
+          -0.03175967559218407,
+          -0.11456282436847687,
+          -0.04699999839067459
+        ],
+        "max_m": [
+          0.03175967559218407,
+          1.3411044497146918e-10,
+          0.02800000086426735
+        ]
+      }
+    ]
+  }
+}

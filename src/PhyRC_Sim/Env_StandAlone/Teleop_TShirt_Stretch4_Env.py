@@ -3173,6 +3173,31 @@ def configure_stretch4(stage, prim_path):
 
     dof = {n: robot.get_dof_index(n) for n in robot.dof_names}
 
+    # DOF mapping inspection: read-only, once per articulation.
+    if os.environ.get("STRETCH4_EXPORT_DOF_MAP") == "1":
+        import json
+        from pathlib import Path as _Path
+
+        _out = _Path.home() / "stretch4_dof_mapping.json"
+        _entry = {
+            "prim_path": str(prim_path),
+            "dof_names": list(robot.dof_names),
+            "dof_indices": {
+                str(n): int(robot.get_dof_index(n))
+                for n in robot.dof_names
+            },
+        }
+
+        if _out.exists():
+            _data = json.loads(_out.read_text())
+        else:
+            _data = {}
+
+        _data[str(prim_path)] = _entry
+        _out.write_text(json.dumps(_data, indent=2))
+        print("[DOF EXPORT]", _entry, flush=True)
+
+
     _wheel_dof_idx = np.array([dof["wheel_0_joint"], dof["wheel_1_joint"], dof["wheel_2_joint"]])
     kps[_wheel_dof_idx] = 0.0
     kds[_wheel_dof_idx] = 2.0

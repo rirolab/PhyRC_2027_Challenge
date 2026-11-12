@@ -1,0 +1,162 @@
+# Phase 2: dual-robot garment reorientation
+#
+# Values under `phyrc_interface` are copied from the public PhyRC interface
+# specification (schema 0.3.0) and must be checked again when the repo changes.
+# Values under `research` are initial engineering parameters, NOT official
+# evaluator thresholds and NOT yet experimentally validated.
+
+project:
+  name: phase2_reorientation
+  version: 0.1.0
+  status: foundation
+  description: >-
+    Observation-driven, closed-loop reorientation of a T-shirt held by two
+    Stretch 4 robots, with a handoff contract for the subsequent dressing stage.
+
+phyrc_interface:
+  schema_version: "0.3.0"
+  spec_path: config/policy_interface.json
+  policy_hz: 20
+  control_hz: 60
+  physics_hz: 240
+  action_period_s: 0.05
+  control_ticks_per_action: 3
+  physics_steps_per_action: 12
+
+  robots:
+    count: 2
+    order: [robot_0, robot_1]
+    joints_per_robot: 13
+
+  cameras:
+    # This order is significant for the runtime stacked RGB-D arrays.
+    order:
+      - overview
+      - robot_0_wrist
+      - robot_1_wrist
+      - robot_0_head
+      - robot_1_head
+    height: 256
+    width: 256
+    rgb_channels: 3
+    depth_channels: 1
+    depth_is_optical_axis_z: true
+    invalid_depth_value_m: 0.0
+    valid_depth_range_m:
+      overview: [0.05, 10.0]
+      robot_0_wrist: [0.03, 3.0]
+      robot_1_wrist: [0.03, 3.0]
+      robot_0_head: [0.05, 5.0]
+      robot_1_head: [0.05, 5.0]
+
+  coordinate_frames:
+    world: "right-handed, Z-up, metres"
+    robot_base: "base_footprint: X-forward, Y-left, Z-up"
+    camera_optical: "X-right, Y-down, Z-forward"
+    pose_layout: [x, y, z, qw, qx, qy, qz]
+
+  observation_shapes:
+    # Shapes are runtime shapes, not the flattened HDF5 storage shapes.
+    rgb: [5, 256, 256, 3]
+    depth: [5, 256, 256, 1]
+    depth_valid: [5, 256, 256, 1]
+    joint_position: [2, 13]
+    joint_velocity: [2, 13]
+    base_pose_world: [2, 7]
+    base_twist_world: [2, 6]
+    grasp_pose_base: [2, 7]
+    fingertip_position_base: [2, 2, 3]
+    fingertip_origin_distance: [2, 1]
+    controller_target: [2, 9]
+    gripper_close_command: [2, 1]
+    previous_action: [2, 9]
+    simulation_time_s: []
+
+  action:
+    shape: [2, 9]
+    dtype: float32
+    min_value: -1.0
+    max_value: 1.0
+    robot_order: [robot_0, robot_1]
+    # Normalized command channels. Zero on channel 8 means KEEP the prior
+    # gripper intent; it does not mean open.
+    columns:
+      - base_forward_velocity
+      - base_left_velocity
+      - base_yaw_velocity
+      - lift_velocity
+      - arm_extension_velocity
+      - wrist_yaw_velocity
+      - wrist_pitch_velocity
+      - wrist_roll_velocity
+      - gripper_command
+    gripper:
+      open_below: -0.5
+      close_above: 0.5
+      otherwise: keep_previous_intent
+
+research:
+  # These are tunable starting values for experiments, not competition rules.
+  orientation_estimation:
+    minimum_confidence: 0.60
+    smoothing_alpha: 0.25
+    vector_frame: world
+    vector_representation: unit_3d_direction
+
+  reorientation:
+    # The target must be estimated from allowed visual observations. Do not
+    # hard-code a world direction for a randomized scene.
+    target_direction_source: visual_reference_estimation
+    internal_orientation_tolerance_deg: 15.0
+    stable_duration_s: 0.5
+    max_estimation_loss_duration_s: 0.25
+
+  execution:
+    enabled: false  # Keep false until perception/planning/control are validated.
+    # Conservative normalized-command caps for initial controlled tests.
+    # These are project limits, not the robot's physical actuation rates.
+    base_translation_abs: 0.10
+    base_yaw_abs: 0.10
+    lift_abs: 0.10
+    arm_extension_abs: 0.10
+    wrist_abs: 0.10
+    preserve_gripper_intent: 0.0
+
+  safety:
+    reject_non_finite_observation: true
+    reject_invalid_action: true
+    stop_on_low_orientation_confidence: true
+    stop_on_missing_target_direction: true
+    minimum_clearance_m: null  # Set only after a valid mapping representation exists.
+
+  mapping:
+    enabled: false  # Add only if experiments show planning needs a local map.
+
+  evaluation:
+    save_png_snapshots: true
+    save_mp4: false
+    snapshot_events:
+      - initial_state
+      - dual_grasp_assessment
+      - lifted_state
+      - reorientation_start
+      - reorientation_progress
+      - safety_warning
+      - final_state
+    save_metrics_csv: true
+    save_events_json: true
+    save_summary_json: true
+
+handoff:
+  schema_version: "0.1.0"
+  next_stage: dressing
+  required_fields:
+    - status
+    - front_direction_world
+    - target_front_direction_world
+    - orientation_error_rad
+    - orientation_confidence
+    - grasp_evidence
+    - gripper_positions_world
+    - stable_duration_s
+    - simulation_time_s

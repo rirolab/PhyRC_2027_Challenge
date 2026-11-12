@@ -16,3 +16,16 @@ __pycache__/
 *.pem
 *.key
 .DS_Store
+
+# Local research dependencies, archives, generated artifacts and backups
+/participant/.deps
+/.venv*/
+/v2_*backup*/
+*.bak
+*.bak_*
+*.before_*
+*.backup*
+*.tar
+*.tar.gz
+*.zip
+/research_output/**
