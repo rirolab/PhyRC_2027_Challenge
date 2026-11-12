@@ -13,6 +13,8 @@ Snapshot of the VM checkout based on lacie-life commit 049fb9f. Official upstrea
 | Root policy and servo scripts, scripts/v2* | Previous controllers and simulator probes |
 | research_output/sam21_tiny_preview_20261112/run_preview.py | Reproducible SAM preview script; raw inputs and generated outputs stay on the VM |
 
+The bootstrap requires the VM's installed V2 Python libraries. The tracked participant/.deps symlink resolves to /output/v2_sdl_pydeps inside the container. Restore the dependency directory under the VM output mount when moving to another VM; its installed contents are excluded from Git.
+
 From a prepared Linux VM at the repository root:
 
 ```bash
